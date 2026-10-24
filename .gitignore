@@ -2,6 +2,11 @@
 tools/galeri/kaynak/
 tools/kurucu/kaynak/
 
+# Anahtarlar depoya girmez; yayın anahtarı GitHub'da Actions secret olarak durur
+.env
+.env.*
+*.pem
+
 .DS_Store
 .wrangler/
 node_modules/
