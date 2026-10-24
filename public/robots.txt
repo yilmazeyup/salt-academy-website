@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://saltacademyconsulting.com/sitemap.xml

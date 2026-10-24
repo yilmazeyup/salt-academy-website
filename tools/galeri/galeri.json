@@ -1,0 +1,30 @@
+[
+  {
+    "kaynak": "egitim-121.jpg",
+    "ad": "egitim-01",
+    "kirp": [95, 0, 1063, 652],
+    "bulanik": [[130, 150, 225, 185], [935, 100, 223, 220]],
+    "alt": "Eğitim salonunda perde önünde sunum ve onu dinleyen katılımcılar"
+  },
+  {
+    "kaynak": "egitim-123.jpg",
+    "ad": "egitim-02",
+    "kirp": null,
+    "bulanik": [[15, 495, 100, 85]],
+    "alt": "Otel salonunda kalabalık bir katılımcı grubuyla eğitim"
+  },
+  {
+    "kaynak": "egitim-125.jpg",
+    "ad": "egitim-03",
+    "kirp": [0, 0, 1060, 960],
+    "bulanik": [[570, 280, 315, 190], [260, 750, 80, 35], [475, 770, 100, 45], [765, 850, 85, 35]],
+    "alt": "U düzenindeki toplantı odasında perdeye yansıtılan sunumu izleyen katılımcılar"
+  },
+  {
+    "kaynak": "egitim-126.jpg",
+    "ad": "egitim-04",
+    "kirp": [0, 250, 720, 1030],
+    "bulanik": [[300, 915, 280, 160], [0, 400, 170, 115], [540, 525, 80, 85]],
+    "alt": "Toplantı odasında eğitmeni dinleyen katılımcılar"
+  }
+]

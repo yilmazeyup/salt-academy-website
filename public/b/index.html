@@ -1,0 +1,588 @@
+<!doctype html>
+<html lang="tr" class="b">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SALT Academy &amp; Consulting · Öğren. Geliş. Dönüştür.</title>
+  <meta name="description" content="SALT Academy & Consulting: kurumlar ve profesyoneller için iletişim, liderlik ve satış eğitimleri. Kadınlar için Liderlik, Kurumsal İletişim Akademisi, Satış Akademisi ve webinarlar.">
+  <meta name="theme-color" content="#040d17">
+  <meta property="og:title" content="SALT Academy & Consulting">
+  <meta property="og:description" content="Öğren. Geliş. Dönüştür. Kurumlar ve profesyoneller için eğitim ve danışmanlık.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="../assets/img/sa-monogram.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="../assets/css/style.css?v=12">
+  <link rel="stylesheet" href="assets/b.css?v=5">
+  <link rel="canonical" href="https://saltacademyconsulting.com/">
+  <script>
+    (function () {
+      var d = document.documentElement;
+      /* A/B testi: bu sayfa B sürümüdür. ?v=a ile A sürümüne geçilir; seçim oturum boyunca korunur. */
+      try {
+        var q = /[?&]v=(a|b)(?:&|$)/i.exec(location.search);
+        if (q && q[1].toLowerCase() === 'a') {
+          sessionStorage.setItem('salt-variant', 'a');
+          var file = location.pathname.split('/').pop();
+          if (file === 'index.html') file = '';
+          d.style.background = '#07182a'; d.style.visibility = 'hidden';
+          setTimeout(function () { d.style.visibility = ''; }, 3000);
+          location.replace('/' + file + location.search + location.hash);
+          return;
+        }
+        sessionStorage.setItem('salt-variant', 'b');
+      } catch (e) { /* özel pencere */ }
+      window.SALT_VARIANT = 'B';
+      if (!/(^|\.)saltacademyconsulting\.com$/.test(location.hostname)) {
+        var m = document.createElement('meta'); m.name = 'robots'; m.content = 'noindex, nofollow'; document.head.appendChild(m);
+      }
+      d.classList.add('js');
+      setTimeout(function () { if (!window.SALT_READY) d.classList.remove('js'); }, 4000);
+      try {
+        if (sessionStorage.getItem('salt-wipe')) { d.classList.add('arrive'); sessionStorage.removeItem('salt-wipe'); }
+        if (sessionStorage.getItem('salt-visited')) d.classList.add('no-preload'); else sessionStorage.setItem('salt-visited', '1');
+      } catch (e) { /* özel pencere */ }
+    })();
+  </script>
+</head>
+
+<body>
+  <a class="skip-link" href="#icerik">İçeriğe geç</a>
+
+  <div class="preloader" aria-hidden="true">
+    <div class="b-pre__slats"><i style="--k:0"></i><i style="--k:1"></i><i style="--k:2"></i><i style="--k:3"></i><i style="--k:4"></i></div>
+    <div class="preloader__mark b-pre__mark">
+      <span class="b-pre__word"><span style="--k:0">S</span><span style="--k:1">A</span><span style="--k:2">L</span><span style="--k:3">T</span></span>
+      <span class="b-pre__line"></span>
+      <span class="preloader__count">000</span>
+    </div>
+  </div>
+  <div class="page-wipe" aria-hidden="true"><i style="--k:0"></i><i style="--k:1"></i><i style="--k:2"></i><i style="--k:3"></i><i style="--k:4"></i></div>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="index.html" aria-label="SALT Academy & Consulting ana sayfa">
+        <span class="brand__mark">SALT</span>
+        <span class="brand__sub">Academy &amp; Consulting</span>
+      </a>
+      <div class="b-header__actions">
+        <button class="search-toggle" type="button" aria-label="Sitede ara" aria-haspopup="dialog" aria-keyshortcuts="Control+K Meta+K /"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M20 20l-4.2-4.2"/></svg></button>
+        <a class="btn btn--solid b-header__cta" href="#iletisim" data-magnetic><span data-scramble>Eğitim talep et</span></a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobil-menu"><span class="b-menu-btn__label" data-text="Menü">Menü</span><span class="b-menu-btn__icon" aria-hidden="true"></span></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobil-menu">
+    <div class="container b-menu__grid">
+      <nav class="b-menu__nav" aria-label="Ana menü">
+        <a href="egitimler.html" style="--k:0"><span class="b-menu__n">01</span><span class="b-menu__t">Eğitimler</span></a>
+        <a href="galeri.html" style="--k:1"><span class="b-menu__n">02</span><span class="b-menu__t">Galeri</span></a>
+        <a href="#yontem" style="--k:2"><span class="b-menu__n">03</span><span class="b-menu__t">Yöntem</span></a>
+        <a href="#kurucu" style="--k:3"><span class="b-menu__n">04</span><span class="b-menu__t">Kurucu</span></a>
+        <a href="#icgoruler" style="--k:4"><span class="b-menu__n">05</span><span class="b-menu__t">İçgörüler</span></a>
+        <a href="#iletisim" style="--k:5"><span class="b-menu__n">06</span><span class="b-menu__t">İletişim</span></a>
+      </nav>
+      <div class="b-menu__aside">
+        <p class="eyebrow">Bize ulaşın</p>
+        <a href="mailto:ayla@saltacademyconsulting.com">ayla@saltacademyconsulting.com</a>
+        <a href="tel:+905445315914">+90 544 531 59 14</a>
+        <a href="wa.html" target="_blank" rel="noopener">WhatsApp'tan yazın →</a>
+        <p class="b-menu__motto">İnsanla gelişir,<br><em>bilgiyle güçlenir.</em></p>
+      </div>
+    </div>
+  </div>
+  <div class="float-actions">
+    <a class="btn btn--solid sticky-cta" href="#iletisim">Eğitim talep et</a>
+    <a class="wa-float" href="wa.html" target="_blank" rel="noopener" aria-label="WhatsApp'tan yazın">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+      <span class="wa-float__label">WhatsApp'tan yazın</span>
+    </a>
+  </div>
+
+  <main id="icerik" tabindex="-1">
+
+    <!-- Kahraman alan: altın ipek -->
+    <section class="b-hero" id="ust" aria-labelledby="hero-title">
+      <canvas class="b-shader" aria-hidden="true"></canvas>
+      <div class="container b-hero__inner">
+        <div class="b-hero__top" data-hero style="--d:.05s">
+          <p class="eyebrow">SALT Academy &amp; Consulting · İstanbul</p>
+          <p class="b-hero__meta">Strateji · Eğitim · Liderlik · Dönüşüm</p>
+        </div>
+        <div class="b-word" data-hero aria-hidden="true"><span class="b-word__l"><span style="--k:0">S</span><small class="b-word__cap" lang="en">Strategy</small></span><span class="b-word__l"><span style="--k:1">A</span><small class="b-word__cap" lang="en">Academy</small></span><span class="b-word__l"><span style="--k:2">L</span><small class="b-word__cap" lang="en">Leadership</small></span><span class="b-word__l"><span style="--k:3">T</span><small class="b-word__cap" lang="en">Transformation</small></span></div>
+        <p class="b-hero__acronym" lang="en" data-hero style="--d:.35s"><b>S</b>trategy · <b>A</b>cademy · <b>L</b>eadership · <b>T</b>ransformation</p>
+        <div class="b-hero__grid">
+          <div>
+            <h1 class="b-hero__title" id="hero-title" data-hero data-chars-in style="--d:.45s">Öğren. Geliş. <em>Dönüştür.</em></h1>
+            <p class="b-hero__lead" data-hero style="--d:.85s">Kurumlar ve profesyoneller için <span class="b-rotator" aria-hidden="true"><span class="b-rotator__track"><span>iletişim</span><span>liderlik</span><span>satış</span><span>iletişim</span></span></span><span class="visually-hidden">iletişim, liderlik ve satış</span> eğitimleri. Her program, öğrenileni 30 günde işe taşıyan bir uygulama planıyla biter.</p>
+          </div>
+          <div class="b-hero__aside" data-hero style="--d:1s">
+            <a class="b-seal" href="#yaklasim" aria-label="Aşağı kaydırın">
+              <svg class="b-seal__ring" viewBox="0 0 200 200" aria-hidden="true"><defs><path id="b-seal-yol" d="M100 100m-78 0a78 78 0 1 1 156 0a78 78 0 1 1-156 0"/></defs><text><textPath href="#b-seal-yol" textLength="486">ÖĞREN · GELİŞ · DÖNÜŞTÜR · ÖĞREN · GELİŞ · DÖNÜŞTÜR ·&#160;</textPath></text></svg>
+              <svg class="b-seal__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg>
+            </a>
+            <div class="hero__actions">
+              <a class="btn btn--solid" href="#programlar" data-magnetic><span data-scramble>Programları keşfet</span>
+                <svg class="btn__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
+              <a class="btn" href="#iletisim" data-magnetic><span data-scramble>Eğitim talep et</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Yaklaşım -->
+    <section class="section b-statement" id="yaklasim" aria-labelledby="yaklasim-baslik">
+      <div class="container">
+        <p class="eyebrow" id="yaklasim-baslik" data-reveal>Yaklaşımımız</p>
+        <p class="b-statement__text" data-scrub-chars>İnsanla gelişir, bilgiyle güçlenir. Bizim için gelişim, yalnızca yeni bilgi edinmek değil; bilgiyi uygulamaya, deneyimi uzmanlığa, potansiyeli <em>somut sonuca</em> dönüştürmektir.</p>
+        <div class="b-principles">
+          <div class="b-principle" data-reveal><span class="b-principle__n">i.</span><h3>İhtiyaçtan başlarız.</h3><p>Her program kurumun gerçek iş sorunuyla ve katılımcı profiliyle açılır.</p></div>
+          <div class="b-principle" data-reveal style="--d:.1s"><span class="b-principle__n">ii.</span><h3>Uygulatırız.</h3><p>Vaka çalışması, rol oyunu ve atölyeler anlatımdan daha çok yer kaplar.</p></div>
+          <div class="b-principle" data-reveal style="--d:.2s"><span class="b-principle__n">iii.</span><h3>Takip ederiz.</h3><p>30 günlük uygulama planı ve takip görüşmesi, öğrenileni davranışa çevirir.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dört değer alanı -->
+    <section class="section b-pillars" id="degerler" aria-labelledby="degerler-baslik">
+      <div class="container">
+        <div class="b-pillars__head">
+          <div>
+            <p class="eyebrow" data-reveal>Dört değer alanı</p>
+            <h2 class="h2 split" id="degerler-baslik">Her program dört alandan <em>beslenir.</em></h2>
+          </div>
+          <p class="lead" data-reveal>SALT adı dört kelimenin baş harflerinden gelir: Strategy, Academy, Leadership, Transformation. Her biri bir yetkinlik ailesidir: strateji, eğitim, liderlik ve dönüşüm.</p>
+        </div>
+        <div class="b-pillars__grid">
+          <div class="b-reveal" data-reveal style="--d:0.00s">
+            <a class="b-card b-pillar" href="egitimler.html#kurumsal-iletisim" data-spot data-tilt>
+              <span class="b-pillar__num">01</span>
+              <svg class="b-pillar__icon b-draw" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 36a20 20 0 1 0 40 0a20 20 0 1 0-40 0"/><path d="M15.5 36a12.5 12.5 0 1 0 25 0a12.5 12.5 0 1 0-25 0"/><path d="M23 36a5 5 0 1 0 10 0a5 5 0 1 0-10 0"/><path d="M28 36 50 14"/><path d="M44 12h8v8"/></svg>
+              <h3 class="b-pillar__title">Strateji</h3>
+              <span class="pillar__en" lang="en"><b>S</b>trategy</span>
+              <p>Sorunu doğru tanımlamadan çözüm olmaz. Problem çözme, müzakere, ikna ve retorik.</p>
+              <span class="b-pillar__link">İlgili programlar →</span>
+            </a>
+          </div>
+          <div class="b-reveal" data-reveal style="--d:0.08s">
+            <a class="b-card b-pillar" href="egitimler.html#kurumsal-iletisim" data-spot data-tilt>
+              <span class="b-pillar__num">02</span>
+              <svg class="b-pillar__icon b-draw" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M32 18c-6-5-15-6-24-5v34c9-1 18 0 24 5 6-5 15-6 24-5V13c-9-1-18 0-24 5Z"/><path d="M32 18v34"/><path d="M14 23c4 0 8 .6 12 2M14 31c4 0 8 .6 12 2M38 25c4-1.4 8-2 12-2M38 33c4-1.4 8-2 12-2"/></svg>
+              <h3 class="b-pillar__title">Eğitim</h3>
+              <span class="pillar__en" lang="en"><b>A</b>cademy</span>
+              <p>Yetişkin öğrenmesine göre tasarlanmış, vaka ve rol oyunu ağırlıklı programlar; eğitmenler için eğitici eğitimi.</p>
+              <span class="b-pillar__link">İlgili programlar →</span>
+            </a>
+          </div>
+          <div class="b-reveal" data-reveal style="--d:0.16s">
+            <a class="b-card b-pillar" href="egitimler.html#kadinlar-icin-liderlik" data-spot data-tilt>
+              <span class="b-pillar__num">03</span>
+              <svg class="b-pillar__icon b-draw" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M25 20a7 7 0 1 0 14 0a7 7 0 1 0-14 0"/><path d="M19 48v-4a13 13 0 0 1 26 0v4"/><path d="M9 26a5 5 0 1 0 10 0a5 5 0 1 0-10 0"/><path d="M4 48v-2a10 10 0 0 1 13-9.5"/><path d="M45 26a5 5 0 1 0 10 0a5 5 0 1 0-10 0"/><path d="M60 48v-2a10 10 0 0 0-13-9.5"/></svg>
+              <h3 class="b-pillar__title">Liderlik</h3>
+              <span class="pillar__en" lang="en"><b>L</b>eadership</span>
+              <p>Kendini tanımaktan liderlik varlığına: kadın liderler için 12 derslik bir yolculuk.</p>
+              <span class="b-pillar__link">İlgili programlar →</span>
+            </a>
+          </div>
+          <div class="b-reveal" data-reveal style="--d:0.24s">
+            <a class="b-card b-pillar" href="egitimler.html#satis-akademisi" data-spot data-tilt>
+              <span class="b-pillar__num">04</span>
+              <svg class="b-pillar__icon b-draw" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 54h48"/><path d="M12 54V40h7v14M24 54V33h7v21M36 54V25h7v29M48 54V16h7v38"/><path d="M10 34 24 22l10 6 18-16"/><path d="M45 12h7v7"/></svg>
+              <h3 class="b-pillar__title">Dönüşüm</h3>
+              <span class="pillar__en" lang="en"><b>T</b>ransformation</span>
+              <p>Öğrenileni davranışa çeviren 30 günlük plan; satışta ve müşteri iletişiminde görünür değişim.</p>
+              <span class="b-pillar__link">İlgili programlar →</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Programlar -->
+    <section class="section b-programs" id="programlar" aria-labelledby="programlar-baslik">
+      <div class="container">
+        <div class="b-programs__head">
+          <div>
+            <p class="eyebrow" data-reveal>Programlar</p>
+            <h2 class="h2 split" id="programlar-baslik">Beş program ailesi, <em>tek bir ilke.</em></h2>
+          </div>
+          <p class="lead" data-reveal>Öğrenileni işe taşımak. Her aile, kurumun ihtiyacına göre birlikte ya da tek tek alınabilir.</p>
+        </div>
+        <div class="b-bento">
+          <div class="b-reveal" data-reveal style="--d:0.00s">
+            <a class="b-card b-prog" href="egitimler.html#kadinlar-icin-liderlik" data-spot data-tilt>
+              <span class="b-prog__big" aria-hidden="true">12</span>
+              <span class="b-prog__n">01 · Liderlik</span>
+              <h3 class="b-prog__title">Kadınlar için Liderlik</h3>
+              <p>Kişisel markadan müzakereye, geri bildirimden network'e uzanan 12 derslik bir liderlik yolculuğu.</p>
+              <div class="b-prog__meta"><span class="tag">12 ders</span><span class="tag">3 atölye</span><span class="tag">Ödevli</span></div>
+              <span class="b-prog__go"><span data-scramble>Programı incele</span> <svg class="btn__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+            </a>
+          </div>
+          <div class="b-reveal" data-reveal style="--d:0.08s">
+            <a class="b-card b-prog" href="egitimler.html#kurumsal-iletisim" data-spot data-tilt>
+              <span class="b-prog__big" aria-hidden="true">6</span>
+              <span class="b-prog__n">02 · İletişim</span>
+              <h3 class="b-prog__title">Kurumsal İletişim Akademisi</h3>
+              <p>Kurumsal dilden şikâyet yönetimine, ikna ve retorikten dijital iletişime altı modül.</p>
+              <div class="b-prog__meta"><span class="tag">6 modül</span><span class="tag">3–4 saat</span><span class="tag">30 günlük plan</span></div>
+              <span class="b-prog__go"><span data-scramble>Programı incele</span> <svg class="btn__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+            </a>
+          </div>
+          <div class="b-reveal" data-reveal style="--d:0.16s">
+            <a class="b-card b-prog" href="egitimler.html#satis-akademisi" data-spot data-tilt>
+              <span class="b-prog__big" aria-hidden="true">5</span>
+              <span class="b-prog__n">03 · Satış</span>
+              <h3 class="b-prog__title">Satış Akademisi</h3>
+              <p>Müşteriyi analiz etmek, DISC ile iletişimi uyarlamak, hikâyeyle anlatmak: etik iknanın araçları.</p>
+              <div class="b-prog__meta"><span class="tag">5 modül</span><span class="tag">45–90 dk</span><span class="tag">Telefonda satış</span></div>
+              <span class="b-prog__go"><span data-scramble>Programı incele</span> <svg class="btn__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+            </a>
+          </div>
+          <div class="b-reveal" data-reveal style="--d:0.24s">
+            <a class="b-card b-prog" href="egitimler.html#kisa-egitimler" data-spot data-tilt>
+              <span class="b-prog__big" aria-hidden="true">60</span>
+              <span class="b-prog__n">04 · Kısa eğitimler</span>
+              <h3 class="b-prog__title">Kısa Eğitimler ve Webinarlar</h3>
+              <p>Liderliğin beş evresi, duygu çarkı, e-posta görgüsü ve zaman yönetimi üzerine 60–90 dakikalık oturumlar.</p>
+              <div class="b-prog__meta"><span class="tag">60–90 dk</span><span class="tag">Online</span></div>
+              <span class="b-prog__go"><span data-scramble>Programı incele</span> <svg class="btn__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+            </a>
+          </div>
+          <div class="b-reveal" data-reveal style="--d:0.32s">
+            <a class="b-card b-prog" href="egitimler.html#crm" data-spot data-tilt>
+              <span class="b-prog__big" aria-hidden="true">8</span>
+              <span class="b-prog__n">05 · Müşteri</span>
+              <h3 class="b-prog__title">CRM ve Müşteri İlişkileri</h3>
+              <p>Müşteriyi tanımaktan segmentasyona, şikâyet yönetiminden performans ölçümüne sekiz modül ve bir vaka çalışması.</p>
+              <div class="b-prog__meta"><span class="tag">8 modül</span><span class="tag">Vaka çalışması</span><span class="tag">CRM planı</span></div>
+              <span class="b-prog__go"><span data-scramble>Programı incele</span> <svg class="btn__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+            </a>
+          </div>
+          <div class="b-reveal" data-reveal>
+            <div class="b-card b-prog b-prog--cta" data-spot>
+              <div>
+                <h3>Kurumunuza özel bir program mı arıyorsunuz?</h3>
+                <p>Modülleri ekibinizin hedefine göre birleştirelim; ihtiyaç analiziyle başlayalım.</p>
+              </div>
+              <a class="btn btn--solid" href="#iletisim" data-magnetic><span data-scramble>Birlikte tasarlayalım</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- On iki derslik yol -->
+    <section class="section b-path-section" id="yolculuk" aria-labelledby="yolculuk-baslik">
+      <div class="container">
+        <div class="b-path__head">
+          <p class="eyebrow" data-reveal>Kadınlar için Liderlik</p>
+          <h2 class="h2 split" id="yolculuk-baslik">On iki derslik <em>bir yolculuk.</em></h2>
+          <p class="lead" data-reveal>Kendini tanımaktan liderlik varlığına. Her ders kişisel bir ödevle biter; üç ders atölye olarak işlenir.</p>
+        </div>
+        <div class="b-path" data-path>
+          <svg class="b-path__svg" aria-hidden="true"><path class="b-path__track"/><path class="b-path__line"/></svg>
+          <ol class="b-path__list">
+            <li class="b-path__item" style="--r:1"><span class="b-path__n">01</span><h3>İşyerinde Kadın Olmak</h3><p>Yönetici ile lider arasındaki fark; liderlik tarzları ve kendi tarzınız.</p></li>
+            <li class="b-path__item" style="--r:2"><span class="b-path__n">02</span><span class="b-path__badge">Atölye</span><h3>Kendini Tanıma, Markalaşma ve Varlık</h3><p>Öz farkındalık, kişisel marka evi ve LinkedIn stratejisi.</p></li>
+            <li class="b-path__item" style="--r:3"><span class="b-path__n">03</span><span class="b-path__badge">Atölye</span><h3>Duygusal Zekâ</h3><p>Duygu çarkıyla duyguları adlandırmak; öz yönetim ve ilişki yönetimi.</p></li>
+            <li class="b-path__item" style="--r:4"><span class="b-path__n">04</span><h3>Dayanıklılık Oluşturma</h3><p>Dayanıklılık, esneklik ve kendi dayanıklılık kaynaklarınız.</p></li>
+            <li class="b-path__item" style="--r:5"><span class="b-path__n">05</span><h3>Lider Gibi Problem Çözme</h3><p>TAMÜD modeli, balık kılçığı, Pareto analizi ve altı şapkalı düşünme.</p></li>
+            <li class="b-path__item" style="--r:6"><span class="b-path__n">06</span><h3>Sesinizi Yükseltin: Liderlik Varlığı</h3><p>Liderlik stilleri, liderliğin yedi dönüşümü ve doğru mentoru bulmak.</p></li>
+            <li class="b-path__item" style="--r:7"><span class="b-path__n">07</span><h3>Geri Bildirim Sanatı</h3><p>Goldsmith'in altı sorusu, Durum-Davranış-Etki ve Pendleton modelleri.</p></li>
+            <li class="b-path__item" style="--r:8"><span class="b-path__n">08</span><span class="b-path__badge">Atölye</span><h3>Geri Bildirim Verme ve Alma</h3><p>Johari penceresi, kör alan ve geri bildirimden diyaloğa.</p></li>
+            <li class="b-path__item" style="--r:9"><span class="b-path__n">09</span><h3>Müzakere Becerileri</h3><p>BATNA, ilkeli müzakere ve kazan-kazan stratejileri.</p></li>
+            <li class="b-path__item" style="--r:10"><span class="b-path__n">10</span><h3>Çatışma Yönetimi</h3><p>Değişime direnç, çatışma teknikleri ve gerçek bir vaka.</p></li>
+            <li class="b-path__item" style="--r:11"><span class="b-path__n">11</span><h3>Network, Başarı ve Öz Bakım</h3><p>Ağ yapısı, dijital ve fiziksel marka, öz şefkat ve zaman yönetimi.</p></li>
+            <li class="b-path__item" style="--r:12"><span class="b-path__n">12</span><h3>Gelecekteki Gelişim</h3><p>On iki dersin özeti ve bir aylık Lider Ben çalışma tablosu.</p></li>
+          </ol>
+        </div>
+        <div class="b-path__cta"><a class="btn" href="egitimler.html#kadinlar-icin-liderlik" data-magnetic><span data-scramble>Tüm dersleri inceleyin</span> <svg class="btn__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+      </div>
+    </section>
+
+    <!-- Yöntem: üç perde -->
+    <section class="b-chapters" id="yontem" aria-labelledby="yontem-baslik">
+      <div class="container b-chapters__intro">
+        <p class="eyebrow" data-reveal>Yöntem</p>
+        <h2 class="h2 split" id="yontem-baslik">Bilmek <em>başlangıçtır.</em></h2>
+        <p class="lead" data-reveal>Her eğitim üç perdede ilerler. Son perde sınıfta değil, 30 gün boyunca iş başında oynanır.</p>
+      </div>
+      <div class="b-stack">
+        <article class="b-chapter b-chapter--navy" aria-labelledby="perde-1">
+          <div class="container b-chapter__grid">
+            <div>
+              <span class="b-chapter__n">Perde 01 / 03</span>
+              <h3 class="b-chapter__word" id="perde-1">Öğren</h3>
+            </div>
+            <div>
+              <p class="b-chapter__text"><span data-fill>Her program kurumun gerçek iş sorunuyla açılır. Kavramı gerçek bir iş örneği ve kısa bir anlatımla kurarız; ezber değil, bağlam öğretiriz.</span></p>
+              <ul class="b-chapter__list">
+                <li><strong>İhtiyaç analizi</strong><span>Kurumun hedefi ve katılımcı profili netleşir.</span></li>
+                <li><strong>Anlatım</strong><span>Model, gerçek iş örneği ve soru-cevap.</span></li>
+              </ul>
+            </div>
+          </div>
+        </article>
+        <article class="b-chapter b-chapter--cream" aria-labelledby="perde-2">
+          <div class="container b-chapter__grid">
+            <div>
+              <span class="b-chapter__n">Perde 02 / 03</span>
+              <h3 class="b-chapter__word" id="perde-2">Geliş</h3>
+            </div>
+            <div>
+              <p class="b-chapter__text"><span data-fill>Beceri, denendiği yerde gelişir. Rol oyunu, vaka analizi ve atölyeler anlatımdan daha çok yer kaplar; ilerlemeyi gözlem ve geri bildirimle birlikte görürüz.</span></p>
+              <ul class="b-chapter__list">
+                <li><strong>Uygula</strong><span>Rol oyunu, vaka analizi ve iş başında küçük görevler.</span></li>
+                <li><strong>Değerlendir</strong><span>Gözlem formu, ön ve son test, davranış odaklı geri bildirim.</span></li>
+              </ul>
+            </div>
+          </div>
+        </article>
+        <article class="b-chapter b-chapter--gold" aria-labelledby="perde-3">
+          <div class="container b-chapter__grid">
+            <div>
+              <span class="b-chapter__n">Perde 03 / 03</span>
+              <h3 class="b-chapter__word" id="perde-3">Dönüştür</h3>
+              <div class="b-dial" aria-hidden="true">
+                <svg viewBox="0 0 200 200"><circle class="b-dial__track" cx="100" cy="100" r="90"/><circle class="b-dial__bar" cx="100" cy="100" r="90" transform="rotate(-90 100 100)"/></svg>
+                <div class="b-dial__num"><span data-dial>30</span><small>gün</small></div>
+              </div>
+            </div>
+            <div>
+              <p class="b-chapter__text"><span data-fill>Öğrenilen, davranışa dönüştüğünde değer kazanır. Her katılımcı geliştireceği davranışı ve ölçütünü yazar; 30. günde kısa bir görüşmeyle gelişimi birlikte değerlendiririz.</span></p>
+              <ul class="b-chapter__list">
+                <li><strong>Geliştir</strong><span>30 günlük uygulama planı.</span></li>
+                <li><strong>Takip</strong><span>30. günde takip görüşmesi.</span></li>
+              </ul>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Duygu çarkı -->
+    <section class="section wheel-section" id="duygu-carki" aria-labelledby="carki-baslik">
+      <div class="container wheel__grid">
+        <div class="wheel" data-wheel data-reveal></div>
+        <div>
+          <p class="eyebrow" data-reveal>Duygusal zekâ</p>
+          <h2 class="h2 split" id="carki-baslik">Söylenmemiş olanı <em>duy.</em></h2>
+          <p class="lead" data-reveal>Robert Plutchik'in duygu çarkı sekiz temel duyguyu üç yoğunlukta gösterir. Bir duyguyu doğru adlandırmak, doğru konuşmanın ilk adımıdır. Çarktan bir duygu seçin.</p>
+          <div class="emotion-panel" data-emotion-panel aria-live="polite" data-reveal>
+            <p class="emotion-panel__level" data-level>Sevinç · Temel yoğunluk</p>
+            <p class="emotion-panel__word" data-word>Sevinç</p>
+            <div class="emotion-panel__scale" data-scale></div>
+            <p class="emotion-panel__tip" data-tip>Başarıyı adıyla takdir edin; neyin işe yaradığını görünür kılın.</p>
+            <p class="emotion-panel__opp" data-opp>Zıttı: Üzüntü.</p>
+          </div>
+          <p class="source">Model: Robert Plutchik'in duygu çarkı. Kadınlar için Liderlik programının duygusal zekâ dersinde ve iletişim eğitimlerinde kullanılır.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Liderliğin beş evresi -->
+    <section class="section leadership" id="liderlik" aria-labelledby="liderlik-baslik">
+      <div class="container">
+        <p class="eyebrow" data-reveal>Liderlik</p>
+        <h2 class="h2 split" id="liderlik-baslik">Liderliğin <em>beş evresi.</em></h2>
+        <p class="lead" data-reveal>Anderson ve Adams'ın modeline göre liderlik, kendi ihtiyaçlarından bütünün hizmetine uzanan bir olgunlaşmadır. Bir evre seçin.</p>
+        <div class="stairs" role="group" aria-label="Liderliğin beş evresi">
+          <button class="stair" type="button" style="--h:38;--i:0" aria-pressed="false" data-title="Egosantrik" data-text="Kimlik önce kendi ihtiyaçları üzerine kurulur. Bu evrede kalan liderler kontrolcü ve otoriter olur: ya benim dediğim olur ya da hiç."><span class="stair__n">1</span><span class="stair__name">Egosantrik</span></button>
+          <button class="stair" type="button" style="--h:52;--i:1" aria-pressed="false" data-title="Tepkisel" data-text="Kurallara ve beklentilere uyum öne çıkar. Düzenli, verimli ve insana önem veren ama gücü ve kararı paylaşamayan bir liderliktir."><span class="stair__n">2</span><span class="stair__name">Tepkisel</span></button>
+          <button class="stair is-active" type="button" style="--h:68;--i:2" aria-pressed="true" data-title="Yaratıcı" data-text="Kişisel vizyonla yön verir; sahiplenmeyi, çevikliği ve ekip çalışmasını büyütür, gücü paylaşır. Yazarlara göre liderlikteki en önemli geçiş budur."><span class="stair__n">3</span><span class="stair__name">Yaratıcı</span></button>
+          <button class="stair" type="button" style="--h:84;--i:3" aria-pressed="false" data-title="Bütünsel" data-text="Karmaşıklığın içinde tüm sistemi görür; hizmetkâr liderlik bu evrede ortaya çıkar. Kurum, daha geniş bir paydaş ağının parçası olarak yönetilir."><span class="stair__n">4</span><span class="stair__name">Bütünsel</span></button>
+          <button class="stair" type="button" style="--h:100;--i:4" aria-pressed="false" data-title="Birleştirici" data-text="Farkındalığın en yüksek evresi: ortak iyilik ve küresel bir bakışla hizmet eden liderlik."><span class="stair__n">5</span><span class="stair__name">Birleştirici</span></button>
+        </div>
+        <div class="stairs-detail" data-stairs-detail aria-live="polite">
+          <h3>Yaratıcı</h3>
+          <p>Kişisel vizyonla yön verir; sahiplenmeyi, çevikliği ve ekip çalışmasını büyütür, gücü paylaşır. Yazarlara göre liderlikteki en önemli geçiş budur.</p>
+        </div>
+        <p class="source">Kaynak: Robert J. Anderson ve William A. Adams, Mastering Leadership (Wiley, 2015).</p>
+      </div>
+    </section>
+
+    <!-- Kurucu -->
+    <section class="section founder" id="kurucu" aria-labelledby="kurucu-baslik">
+      <div class="container founder__grid">
+        <figure class="portrait portrait--photo" data-reveal>
+          <img src="../assets/img/kurucu-ayla-ozalp-600.webp" srcset="../assets/img/kurucu-ayla-ozalp-600.webp 600w, ../assets/img/kurucu-ayla-ozalp-900.webp 900w" sizes="(max-width: 900px) 90vw, 40vw" alt="Ayla Özalp, SALT Academy &amp; Consulting kurucusu" width="600" height="750" loading="lazy" decoding="async">
+        </figure>
+        <div>
+          <p class="eyebrow" data-reveal>Kurucu</p>
+          <h2 class="h2 split" id="kurucu-baslik">Ayla Özalp</h2>
+          <svg class="signature" viewBox="0 0 320 40" aria-hidden="true" data-reveal><path d="M4 30 C 60 30, 92 6, 160 10 S 262 34, 316 8"/></svg>
+          <p class="founder__role" data-reveal>Kurucu · Eğitim ve Gelişim Yöneticisi</p>
+          <blockquote class="founder__quote" data-reveal>“Gelişim, bilgiyi uygulamaya, deneyimi uzmanlığa ve potansiyeli somut sonuçlara dönüştürmektir.”</blockquote>
+          <p class="founder__bio" data-reveal>Operasyon yönetimi, müşteri deneyimi, şikâyet yönetimi, süreç geliştirme ve proje koordinasyonundaki deneyimini SALT Academy &amp; Consulting çatısında topladı. Sakarya Üniversitesi Bilgisayar Programcılığı mezunu; gelişimini farklı üniversitelerden aldığı eğitim ve sertifikalarla sürdürdü.</p>
+          <p class="founder__bio" data-reveal>Kadınların iş hayatında daha görünür, güçlü ve etkili liderlik rolleri üstlenmesini destekleyen programlara özellikle önem veriyor.</p>
+          <div class="chips" data-reveal>
+            <span class="chip">Kurumsal iletişim</span><span class="chip">Etkili iletişim</span><span class="chip">Liderlik</span>
+            <span class="chip">Kadınlar için liderlik</span><span class="chip">Müşteri deneyimi</span><span class="chip">Şikâyet yönetimi</span><span class="chip">Süreç geliştirme</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Rakamlar ve içgörüler -->
+    <section class="section b-insights" id="icgoruler" aria-labelledby="icgoruler-baslik">
+      <div class="container">
+        <p class="eyebrow" data-reveal>Rakamlarla SALT</p>
+        <div class="stats">
+          <div class="stat" data-reveal><div class="stat__num" data-count="12">12</div><p class="stat__label">derslik Kadınlar için Liderlik programı</p></div>
+          <div class="stat" data-reveal style="--d:.08s"><div class="stat__num" data-count="6">6</div><p class="stat__label">modüllük Kurumsal İletişim Akademisi</p></div>
+          <div class="stat" data-reveal style="--d:.16s"><div class="stat__num" data-count="5">5</div><p class="stat__label">modüllük Satış Akademisi</p></div>
+          <div class="stat" data-reveal style="--d:.24s"><div class="stat__num" data-count="30">30</div><p class="stat__label">günlük uygulama planı, her eğitimin sonunda</p></div>
+        </div>
+
+        <div style="margin-top: clamp(96px, 12vw, 160px)">
+          <p class="eyebrow" data-reveal>İçgörüler</p>
+          <h2 class="h2 split" id="icgoruler-baslik">Kısa okumalar, <em>uzun etkiler.</em></h2>
+          <div class="insights">
+            <article class="insight b-card" data-spot data-reveal>
+              <span class="insight__cat">Kurumsal iletişim</span>
+              <h3>Seni neden CC'ye koydum?</h3>
+              <p>Bilgilendirme, takip, görünürlük, yanıt beklentisi: bir e-postada CC'nin dört anlamı.</p>
+              <span class="insight__more">Yakında blogda</span>
+            </article>
+            <article class="insight b-card" data-spot data-reveal style="--d:.08s">
+              <span class="insight__cat">Müşteri iletişimi</span>
+              <h3>Şikâyet yönetiminin yedi adımı</h3>
+              <p>Dinle, netleştir, özetle, empati kur, seçenekleri değerlendir, süre ver, takip et.</p>
+              <span class="insight__more">Yakında blogda</span>
+            </article>
+            <article class="insight b-card" data-spot data-reveal style="--d:.16s">
+              <span class="insight__cat">Kişisel gelişim</span>
+              <h3>Zamanımıza ne ölçüde hakimiz?</h3>
+              <p>On soruluk "zaman hırsızlarım" testiyle günün nereye gittiğini görün.</p>
+              <span class="insight__more">Test yakında</span>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Webinar -->
+    <section class="webinar" id="webinar" aria-labelledby="webinar-baslik">
+      <div class="container webinar__grid">
+        <div>
+          <p class="eyebrow">SALT Webinar Serisi</p>
+          <h2 class="h2" id="webinar-baslik">Ekipler için <em>60–90 dakika.</em></h2>
+          <p>Liderlik, iletişim ve satış üzerine online oturumlar. İlk yayın tarihi açıklandığında size haber verelim.</p>
+        </div>
+        <form class="webinar__form" data-mailto="ayla@saltacademyconsulting.com" data-subject="Webinar duyuru listesi">
+          <label class="visually-hidden" for="w-eposta">E-posta adresiniz</label>
+          <input id="w-eposta" name="eposta" type="email" autocomplete="email" required placeholder="E-posta adresiniz">
+          <button class="btn" type="submit">Haber ver</button>
+          <label class="check"><input type="checkbox" required> <span>Webinar duyurularını e-postayla almayı kabul ediyorum.</span></label>
+          <p class="form__success" hidden>Teşekkürler. E-posta uygulamanız açılıyor; mesajı gönderdiğinizde listeye ekleniyorsunuz.</p>
+        </form>
+      </div>
+    </section>
+
+    <!-- İletişim -->
+    <section class="section section--deep contact" id="iletisim" aria-labelledby="iletisim-baslik">
+      <div class="container contact__grid">
+        <div>
+          <p class="eyebrow" data-reveal>İletişim</p>
+          <h2 class="contact__title split" id="iletisim-baslik">Ekibiniz için doğru eğitimi <em>birlikte</em> tasarlayalım.</h2>
+          <p class="lead" data-reveal style="margin-top: 24px">Formu doldurun; 24 saat içinde dönüp ihtiyaç görüşmesi için bir saat önerelim.</p>
+          <ul class="contact__list" data-reveal>
+            <li><span class="contact__label">E-posta</span><a href="mailto:ayla@saltacademyconsulting.com">ayla@saltacademyconsulting.com</a></li>
+            <li><span class="contact__label">WhatsApp</span><a href="wa.html" target="_blank" rel="noopener">Hemen yazın · +90 544 531 59 14</a></li>
+            <li><span class="contact__label">Telefon</span><a href="tel:+905445315914">+90 544 531 59 14</a></li>
+            <li><span class="contact__label">Adres</span><span>Ümraniye, İstanbul</span></li>
+          </ul>
+        </div>
+        <form class="form" data-mailto="ayla@saltacademyconsulting.com" data-subject="Web sitesi eğitim talebi" data-thanks="tesekkurler.html" data-reveal aria-describedby="form-not">
+          <div class="field"><label for="f-ad">Ad Soyad *</label><input id="f-ad" name="ad" autocomplete="name" required></div>
+          <div class="field"><label for="f-kurum">Kurum</label><input id="f-kurum" name="kurum" autocomplete="organization"></div>
+          <div class="field"><label for="f-eposta">E-posta *</label><input id="f-eposta" name="eposta" type="email" autocomplete="email" required></div>
+          <div class="field"><label for="f-tel">Telefon</label><input id="f-tel" name="telefon" type="tel" autocomplete="tel"></div>
+          <div class="field field--full">
+            <label for="f-program">İlgilendiğiniz program</label>
+            <select id="f-program" name="program">
+              <option>Kuruma özel program</option>
+              <option>Kadınlar için Liderlik</option>
+              <option>Kurumsal İletişim Akademisi</option>
+              <option>Satış Akademisi</option>
+              <option>Kısa eğitim veya webinar</option>
+            </select>
+          </div>
+          <div class="field field--full"><label for="f-mesaj">Mesajınız</label><textarea id="f-mesaj" name="mesaj" placeholder="Ekip büyüklüğü, hedef ve uygun tarih aralığı"></textarea></div>
+          <label class="check"><input type="checkbox" required> <span><a href="../kvkk.html" target="_blank" rel="noopener">KVKK Aydınlatma Metni</a>'ni okudum; kişisel verilerimin talebimi yanıtlamak için işlenmesini kabul ediyorum. *</span></label>
+          <label class="check"><input type="checkbox" name="bulten"> <span>SALT'tan e-bülten ve etkinlik duyuruları almak istiyorum (isteğe bağlı).</span></label>
+          <div><button class="btn btn--solid" type="submit" data-magnetic>Gönder
+            <svg class="btn__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button></div>
+          <p class="form__note" id="form-not">Gönder'e bastığınızda e-posta uygulamanız hazır bir mesajla açılır; göndermeniz yeterli. İsterseniz WhatsApp'tan da yazabilirsiniz.</p>
+          <p class="form__success" hidden>E-posta uygulamanız açılıyor…</p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track"><span>Öğren</span><span>Geliş</span><span>Dönüştür</span><span>İnsanla gelişir</span><span>Bilgiyle güçlenir</span></div>
+      <div class="marquee__track"><span>Öğren</span><span>Geliş</span><span>Dönüştür</span><span>İnsanla gelişir</span><span>Bilgiyle güçlenir</span></div>
+    </div>
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <a class="brand" href="index.html"><span class="brand__mark">SALT</span><span class="brand__sub">Academy &amp; Consulting</span></a>
+          <p class="footer__about">Kurumlar ve profesyoneller için strateji, eğitim, liderlik ve dönüşüm.</p>
+        </div>
+        <div class="footer__col">
+          <h4>Eğitimler</h4>
+          <ul>
+            <li><a href="egitimler.html#kadinlar-icin-liderlik">Kadınlar için Liderlik</a></li>
+            <li><a href="egitimler.html#kurumsal-iletisim">Kurumsal İletişim Akademisi</a></li>
+            <li><a href="egitimler.html#satis-akademisi">Satış Akademisi</a></li>
+            <li><a href="egitimler.html#crm">CRM ve Müşteri İlişkileri</a></li>
+            <li><a href="egitimler.html#kisa-egitimler">Kısa eğitimler</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>SALT</h4>
+          <ul>
+            <li><a href="galeri.html">Galeri</a></li>
+            <li><a href="#yontem">Yöntem</a></li>
+            <li><a href="#kurucu">Kurucu</a></li>
+            <li><a href="#icgoruler">İçgörüler</a></li>
+            <li><a href="#iletisim">İletişim</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Takip edin</h4>
+          <ul>
+            <li><a href="https://www.linkedin.com/company/salt-academy-consulting" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="https://www.facebook.com/saltacademyconsulting" target="_blank" rel="noopener">Facebook</a></li>
+            <li><a href="https://www.instagram.com/saltacademyconsulting/" target="_blank" rel="noopener">Instagram</a></li>
+            <li><span class="footer__soon">YouTube · yakında</span></li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer__word" aria-hidden="true">SALT</p>
+      <p class="footer__acronym" lang="en"><b>S</b>trategy · <b>A</b>cademy · <b>L</b>eadership · <b>T</b>ransformation</p>
+      <div class="footer__bottom">
+        <span>© 2026 SALT Academy &amp; Consulting</span>
+        <span><a href="../kvkk.html">KVKK Aydınlatma Metni</a> · <a href="../cerez-politikasi.html">Çerez Politikası</a></span>
+        <span>Tasarım ve geliştirme: Manaliza Agency</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js" defer></script>
+  <script src="assets/b.js?v=3" defer></script>
+  <script src="../assets/js/main.js?v=9" defer></script>
+  <script src="../assets/js/arama.js?v=1" defer></script>
+</body>
+</html>

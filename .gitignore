@@ -1,0 +1,8 @@
+# İşlenmemiş fotoğraflar depoya girmez: orijinallerde kurum logoları ve yüzler açık durur
+tools/galeri/kaynak/
+tools/kurucu/kaynak/
+
+.DS_Store
+.wrangler/
+node_modules/
+__pycache__/
