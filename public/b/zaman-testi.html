@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="tr" class="b">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zaman yönetimi testi · SALT Academy &amp; Consulting</title>
+  <meta name="description" content="Zamanımıza ne ölçüde hâkimiz? On soruluk zaman yönetimi testiyle puanınızı ve sizi en çok zorlayan üç zaman hırsızını görün.">
+  <meta name="theme-color" content="#040d17">
+  <link rel="icon" href="../assets/img/sa-monogram.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="../assets/css/style.css?v=12">
+  <link rel="stylesheet" href="assets/b.css?v=5">
+  <link rel="canonical" href="https://saltacademyconsulting.com/zaman-testi">
+  <script>
+    (function () {
+      var d = document.documentElement;
+      /* A/B testi: bu sayfa B sürümüdür. ?v=a ile A sürümüne geçilir; seçim oturum boyunca korunur. */
+      try {
+        var q = /[?&]v=(a|b)(?:&|$)/i.exec(location.search);
+        if (q && q[1].toLowerCase() === 'a') {
+          sessionStorage.setItem('salt-variant', 'a');
+          var file = location.pathname.split('/').pop();
+          if (file === 'index.html') file = '';
+          d.style.background = '#07182a'; d.style.visibility = 'hidden';
+          setTimeout(function () { d.style.visibility = ''; }, 3000);
+          location.replace('/' + file + location.search + location.hash);
+          return;
+        }
+        sessionStorage.setItem('salt-variant', 'b');
+      } catch (e) { /* özel pencere */ }
+      window.SALT_VARIANT = 'B';
+      if (!/(^|\.)saltacademyconsulting\.com$/.test(location.hostname)) {
+        var m = document.createElement('meta'); m.name = 'robots'; m.content = 'noindex, nofollow'; document.head.appendChild(m);
+      }
+      d.classList.add('js');
+      setTimeout(function () { if (!window.SALT_READY) d.classList.remove('js'); }, 4000);
+      try {
+        if (sessionStorage.getItem('salt-wipe')) { d.classList.add('arrive'); sessionStorage.removeItem('salt-wipe'); }
+        if (sessionStorage.getItem('salt-visited')) d.classList.add('no-preload'); else sessionStorage.setItem('salt-visited', '1');
+      } catch (e) { /* özel pencere */ }
+    })();
+  </script>
+
+  <style>
+    .zt { max-width: 860px; }
+    .zt-nasil { color: var(--muted-on-navy); margin: 0 0 28px; font-size: 0.95rem; }
+    .zt-soru { border: 1px solid var(--line); border-radius: 18px; padding: 22px 24px 20px; margin: 0 0 14px; background: rgba(4, 13, 23, 0.35); transition: border-color .3s; }
+    .zt-soru.is-eksik { border-color: var(--gold-400); }
+    .zt-soru legend { float: left; width: 100%; padding: 0; margin: 0 0 16px; font-family: var(--font-display); font-size: clamp(1.3rem, 2.4vw, 1.6rem); line-height: 1.2; }
+    .zt-soru legend span { font-family: var(--font-body); font-size: 0.78rem; letter-spacing: 0.14em; color: var(--gold-400); display: block; margin-bottom: 6px; }
+    .zt-secenekler { clear: both; display: flex; flex-wrap: wrap; gap: 8px; }
+    .zt-secenek { position: relative; }
+    .zt-secenek input { position: absolute; opacity: 0; inset: 0; margin: 0; cursor: pointer; }
+    .zt-secenek span { display: inline-block; padding: 9px 16px; border-radius: 999px; border: 1px solid var(--line); font-size: 0.9rem; cursor: pointer; transition: background .2s, color .2s, border-color .2s; }
+    .zt-secenek input:hover + span { border-color: var(--gold-500); }
+    .zt-secenek input:focus-visible + span { outline: 2px solid var(--gold-400); outline-offset: 3px; }
+    .zt-secenek input:checked + span { background: var(--gold-400); border-color: var(--gold-400); color: var(--navy-900); font-weight: 600; }
+    .zt-alt { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 24px; margin-top: 26px; }
+    .zt-alt output { color: var(--muted-on-navy); font-size: 0.9rem; }
+    .zt-uyari { color: var(--gold-300); margin: 0; font-size: 0.9rem; }
+    .zt-gizlilik { color: var(--muted-on-navy); font-size: 0.8rem; margin: 18px 0 0; }
+    .zt-sonuc { margin-top: 40px; padding: clamp(24px, 4vw, 44px); border-radius: 24px; border: 1px solid rgba(224, 183, 128, 0.4); background: rgba(224, 183, 128, 0.08); outline: none; }
+    .zt-puan { font-family: var(--font-display); line-height: 1; margin: 0 0 8px; color: var(--gold-300); }
+    .zt-puan__deger { font-size: clamp(4rem, 10vw, 6.5rem); }
+    .zt-puan__en { font-size: 1.6rem; color: var(--muted-on-navy); }
+    .zt-baslik { font-family: var(--font-display); font-size: clamp(1.7rem, 3.4vw, 2.4rem); line-height: 1.1; margin: 0 0 12px; }
+    .zt-yorum { margin: 0 0 24px; max-width: 60ch; }
+    .zt-hirsiz-baslik { font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold-400); margin: 0 0 10px; }
+    .zt-hirsizlar { margin: 0 0 24px; padding-left: 20px; }
+    .zt-hirsizlar li { margin-bottom: 4px; }
+    .zt-sonuc__not { color: var(--muted-on-navy); font-size: 0.88rem; margin: 0 0 24px; max-width: 62ch; }
+    .zt-sonuc__eylem { display: flex; flex-wrap: wrap; gap: 12px; }
+    .zt-yeniden { background: none; border: 1px solid var(--line); color: inherit; border-radius: 999px; padding: 12px 20px; font: inherit; cursor: pointer; }
+    .zt-yeniden:hover { border-color: var(--gold-400); }
+    .is-bitti .zt-gonder { display: none; }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#icerik">İçeriğe geç</a>
+
+  <div class="preloader" aria-hidden="true">
+    <div class="b-pre__slats"><i style="--k:0"></i><i style="--k:1"></i><i style="--k:2"></i><i style="--k:3"></i><i style="--k:4"></i></div>
+    <div class="preloader__mark b-pre__mark">
+      <span class="b-pre__word"><span style="--k:0">S</span><span style="--k:1">A</span><span style="--k:2">L</span><span style="--k:3">T</span></span>
+      <span class="b-pre__line"></span>
+      <span class="preloader__count">000</span>
+    </div>
+  </div>
+  <div class="page-wipe" aria-hidden="true"><i style="--k:0"></i><i style="--k:1"></i><i style="--k:2"></i><i style="--k:3"></i><i style="--k:4"></i></div>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="index.html" aria-label="SALT Academy & Consulting ana sayfa">
+        <span class="brand__mark">SALT</span>
+        <span class="brand__sub">Academy &amp; Consulting</span>
+      </a>
+      <div class="b-header__actions">
+        <button class="search-toggle" type="button" aria-label="Sitede ara" aria-haspopup="dialog" aria-keyshortcuts="Control+K Meta+K /"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M20 20l-4.2-4.2"/></svg></button>
+        <a class="btn btn--solid b-header__cta" href="index.html#iletisim" data-magnetic><span data-scramble>Eğitim talep et</span></a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobil-menu"><span class="b-menu-btn__label" data-text="Menü">Menü</span><span class="b-menu-btn__icon" aria-hidden="true"></span></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobil-menu">
+    <div class="container b-menu__grid">
+      <nav class="b-menu__nav" aria-label="Ana menü">
+        <a href="egitimler.html" style="--k:0"><span class="b-menu__n">01</span><span class="b-menu__t">Eğitimler</span></a>
+        <a href="galeri.html" style="--k:1"><span class="b-menu__n">02</span><span class="b-menu__t">Galeri</span></a>
+        <a href="index.html#yontem" style="--k:2"><span class="b-menu__n">03</span><span class="b-menu__t">Yöntem</span></a>
+        <a href="index.html#kurucu" style="--k:3"><span class="b-menu__n">04</span><span class="b-menu__t">Kurucu</span></a>
+        <a href="index.html#icgoruler" style="--k:4"><span class="b-menu__n">05</span><span class="b-menu__t">İçgörüler</span></a>
+        <a href="index.html#iletisim" style="--k:5"><span class="b-menu__n">06</span><span class="b-menu__t">İletişim</span></a>
+      </nav>
+      <div class="b-menu__aside">
+        <p class="eyebrow">Bize ulaşın</p>
+        <a href="mailto:ayla@saltacademyconsulting.com">ayla@saltacademyconsulting.com</a>
+        <a href="tel:+905445315914">+90 544 531 59 14</a>
+        <a href="wa.html" target="_blank" rel="noopener">WhatsApp'tan yazın →</a>
+        <p class="b-menu__motto">İnsanla gelişir,<br><em>bilgiyle güçlenir.</em></p>
+      </div>
+    </div>
+  </div>
+  <div class="float-actions">
+    <a class="btn btn--solid sticky-cta" href="index.html#iletisim">Eğitim talep et</a>
+    <a class="wa-float" href="wa.html" target="_blank" rel="noopener" aria-label="WhatsApp'tan yazın">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+      <span class="wa-float__label">WhatsApp'tan yazın</span>
+    </a>
+  </div>
+
+  <main id="icerik" tabindex="-1">
+
+    <section class="page-hero" aria-labelledby="sayfa-baslik">
+      <canvas class="b-shader" aria-hidden="true"></canvas>
+      <div class="container">
+        <p class="eyebrow" data-hero style="--d:.05s">Zaman yönetimi testi</p>
+        <h1 class="page-hero__title" id="sayfa-baslik" data-hero data-chars-in style="--d:.15s">Zamanımıza ne ölçüde <em>hâkimiz</em>?</h1>
+        <p class="lead" data-hero style="--d:.35s">Günü kim, ne çalıyor? On cümlelik bu testle zaman yönetimi puanınızı ve sizi en çok zorlayan üç zaman hırsızını görün.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-label="Zaman yönetimi testi">
+      <div class="container zt">
+        <p class="zt-nasil">Son bir haftanızı düşünün ve her cümleyi ne sıklıkla yaşadığınızı işaretleyin. On cümle, yaklaşık iki dakika.</p>
+        <form id="zaman-testi" novalidate>
+          <fieldset class="zt-soru" data-katsayi="1" data-hirsiz="Zamanın nereye gittiğini bilmemek">
+            <legend><span>01 / 10</span>Günün sonunda zamanımın nereye gittiğini tam olarak söyleyemiyorum.</legend>
+            <div class="zt-secenekler"><label class="zt-secenek"><input type="radio" name="s1" value="0" required><span>Neredeyse her zaman</span></label><label class="zt-secenek"><input type="radio" name="s1" value="1" required><span>Sık sık</span></label><label class="zt-secenek"><input type="radio" name="s1" value="2" required><span>Bazen</span></label><label class="zt-secenek"><input type="radio" name="s1" value="3" required><span>Nadiren ya da hiç</span></label></div>
+          </fieldset>
+          <fieldset class="zt-soru" data-katsayi="2" data-hirsiz="Plansızlık">
+            <legend><span>02 / 10</span>Güne yazılı bir plan ya da öncelik listesi olmadan başlıyorum.</legend>
+            <div class="zt-secenekler"><label class="zt-secenek"><input type="radio" name="s2" value="0" required><span>Neredeyse her zaman</span></label><label class="zt-secenek"><input type="radio" name="s2" value="1" required><span>Sık sık</span></label><label class="zt-secenek"><input type="radio" name="s2" value="2" required><span>Bazen</span></label><label class="zt-secenek"><input type="radio" name="s2" value="3" required><span>Nadiren ya da hiç</span></label></div>
+          </fieldset>
+          <fieldset class="zt-soru" data-katsayi="2" data-hirsiz="Acil ile önemliyi karıştırmak">
+            <legend><span>03 / 10</span>Acil görünen işler, önemli işlerimin önüne geçiyor.</legend>
+            <div class="zt-secenekler"><label class="zt-secenek"><input type="radio" name="s3" value="0" required><span>Neredeyse her zaman</span></label><label class="zt-secenek"><input type="radio" name="s3" value="1" required><span>Sık sık</span></label><label class="zt-secenek"><input type="radio" name="s3" value="2" required><span>Bazen</span></label><label class="zt-secenek"><input type="radio" name="s3" value="3" required><span>Nadiren ya da hiç</span></label></div>
+          </fieldset>
+          <fieldset class="zt-soru" data-katsayi="1" data-hirsiz="Verimli saatleri korumamak">
+            <legend><span>04 / 10</span>En verimli olduğum saatleri rutin, az önemli işlere harcıyorum.</legend>
+            <div class="zt-secenekler"><label class="zt-secenek"><input type="radio" name="s4" value="0" required><span>Neredeyse her zaman</span></label><label class="zt-secenek"><input type="radio" name="s4" value="1" required><span>Sık sık</span></label><label class="zt-secenek"><input type="radio" name="s4" value="2" required><span>Bazen</span></label><label class="zt-secenek"><input type="radio" name="s4" value="3" required><span>Nadiren ya da hiç</span></label></div>
+          </fieldset>
+          <fieldset class="zt-soru" data-katsayi="1" data-hirsiz="Değişikliğe uyum sağlayamamak">
+            <legend><span>05 / 10</span>Plan dışı bir iş çıktığında günümün geri kalanı dağılıyor.</legend>
+            <div class="zt-secenekler"><label class="zt-secenek"><input type="radio" name="s5" value="0" required><span>Neredeyse her zaman</span></label><label class="zt-secenek"><input type="radio" name="s5" value="1" required><span>Sık sık</span></label><label class="zt-secenek"><input type="radio" name="s5" value="2" required><span>Bazen</span></label><label class="zt-secenek"><input type="radio" name="s5" value="3" required><span>Nadiren ya da hiç</span></label></div>
+          </fieldset>
+          <fieldset class="zt-soru" data-katsayi="1" data-hirsiz="Kesintiler">
+            <legend><span>06 / 10</span>E-posta, mesaj ve bildirimler işimi sık sık bölüyor.</legend>
+            <div class="zt-secenekler"><label class="zt-secenek"><input type="radio" name="s6" value="0" required><span>Neredeyse her zaman</span></label><label class="zt-secenek"><input type="radio" name="s6" value="1" required><span>Sık sık</span></label><label class="zt-secenek"><input type="radio" name="s6" value="2" required><span>Bazen</span></label><label class="zt-secenek"><input type="radio" name="s6" value="3" required><span>Nadiren ya da hiç</span></label></div>
+          </fieldset>
+          <fieldset class="zt-soru" data-katsayi="1" data-hirsiz="Verimsiz toplantılar">
+            <legend><span>07 / 10</span>Amacı ya da gündemi belli olmayan toplantılarda vakit geçiriyorum.</legend>
+            <div class="zt-secenekler"><label class="zt-secenek"><input type="radio" name="s7" value="0" required><span>Neredeyse her zaman</span></label><label class="zt-secenek"><input type="radio" name="s7" value="1" required><span>Sık sık</span></label><label class="zt-secenek"><input type="radio" name="s7" value="2" required><span>Bazen</span></label><label class="zt-secenek"><input type="radio" name="s7" value="3" required><span>Nadiren ya da hiç</span></label></div>
+          </fieldset>
+          <fieldset class="zt-soru" data-katsayi="1" data-hirsiz="Hayır diyememek">
+            <legend><span>08 / 10</span>Bana ait olmayan işlere &quot;hayır&quot; diyemiyorum.</legend>
+            <div class="zt-secenekler"><label class="zt-secenek"><input type="radio" name="s8" value="0" required><span>Neredeyse her zaman</span></label><label class="zt-secenek"><input type="radio" name="s8" value="1" required><span>Sık sık</span></label><label class="zt-secenek"><input type="radio" name="s8" value="2" required><span>Bazen</span></label><label class="zt-secenek"><input type="radio" name="s8" value="3" required><span>Nadiren ya da hiç</span></label></div>
+          </fieldset>
+          <fieldset class="zt-soru" data-katsayi="1" data-hirsiz="Erteleme">
+            <legend><span>09 / 10</span>Zor ya da sevmediğim işleri son ana bırakıyorum.</legend>
+            <div class="zt-secenekler"><label class="zt-secenek"><input type="radio" name="s9" value="0" required><span>Neredeyse her zaman</span></label><label class="zt-secenek"><input type="radio" name="s9" value="1" required><span>Sık sık</span></label><label class="zt-secenek"><input type="radio" name="s9" value="2" required><span>Bazen</span></label><label class="zt-secenek"><input type="radio" name="s9" value="3" required><span>Nadiren ya da hiç</span></label></div>
+          </fieldset>
+          <fieldset class="zt-soru" data-katsayi="1" data-hirsiz="Mükemmeliyetçilik">
+            <legend><span>10 / 10</span>Bitmiş bir işle &quot;daha iyi olsun&quot; diye gereğinden uzun uğraşıyorum.</legend>
+            <div class="zt-secenekler"><label class="zt-secenek"><input type="radio" name="s10" value="0" required><span>Neredeyse her zaman</span></label><label class="zt-secenek"><input type="radio" name="s10" value="1" required><span>Sık sık</span></label><label class="zt-secenek"><input type="radio" name="s10" value="2" required><span>Bazen</span></label><label class="zt-secenek"><input type="radio" name="s10" value="3" required><span>Nadiren ya da hiç</span></label></div>
+          </fieldset>
+          <div class="zt-alt">
+            <button class="btn btn--solid zt-gonder" type="submit">Sonucumu göster</button>
+            <output id="zt-ilerleme" aria-live="polite">0 / 10 yanıtlandı</output>
+            <p class="zt-uyari" id="zt-uyari" role="alert" hidden></p>
+          </div>
+          <p class="zt-gizlilik">Yanıtlarınız kaydedilmez ve hiçbir yere gönderilmez; puanınız yalnızca bu sayfada hesaplanır.</p>
+        </form>
+
+        <div class="zt-sonuc" id="zt-sonuc" tabindex="-1" aria-live="polite" hidden>
+          <p class="zt-puan"><span class="zt-puan__deger">0</span> <span class="zt-puan__en">/ 36</span></p>
+          <h2 class="zt-baslik"></h2>
+          <p class="zt-yorum"></p>
+          <p class="zt-hirsiz-baslik"></p>
+          <ol class="zt-hirsizlar"></ol>
+          <p class="zt-sonuc__not">Bu test, Kadınlar için Liderlik programının zaman yönetimi çalışmasında kullandığımız formdur. Eğitimde her katılımcı kendi zaman hırsızları için bir haftalık adım belirler.</p>
+          <div class="zt-sonuc__eylem">
+            <a class="btn btn--solid" href="index.html#iletisim" data-magnetic>Ekibiniz için eğitim talep edin</a>
+            <a class="zt-yeniden" href="egitimler.html#kadinlar-icin-liderlik">Programı inceleyin</a>
+            <button class="zt-yeniden" type="button" id="zt-yeniden">Testi yeniden yap</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cta-band" aria-labelledby="cta-baslik">
+      <div class="container">
+        <p class="eyebrow" data-reveal>Kuruma özel</p>
+        <h2 class="h2 split" id="cta-baslik">Ekibinizin zamanı <em>kimde</em>?</h2>
+        <p class="lead" data-reveal>Zaman yönetimini ekibinizle uygulamalı bir oturumda çalışalım; içeriği ihtiyacınıza göre birlikte belirleyelim.</p>
+        <a class="btn btn--solid" href="index.html#iletisim" data-magnetic data-reveal>Eğitim talep et
+          <svg class="btn__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </section>
+  </main>
+
+
+  <footer class="site-footer">
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track"><span>Öğren</span><span>Geliş</span><span>Dönüştür</span><span>İnsanla gelişir</span><span>Bilgiyle güçlenir</span></div>
+      <div class="marquee__track"><span>Öğren</span><span>Geliş</span><span>Dönüştür</span><span>İnsanla gelişir</span><span>Bilgiyle güçlenir</span></div>
+    </div>
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <a class="brand" href="index.html"><span class="brand__mark">SALT</span><span class="brand__sub">Academy &amp; Consulting</span></a>
+          <p class="footer__about">Kurumlar ve profesyoneller için strateji, eğitim, liderlik ve dönüşüm.</p>
+        </div>
+        <div class="footer__col">
+          <h4>Eğitimler</h4>
+          <ul>
+            <li><a href="egitimler.html#kadinlar-icin-liderlik">Kadınlar için Liderlik</a></li>
+            <li><a href="egitimler.html#kurumsal-iletisim">Kurumsal İletişim Akademisi</a></li>
+            <li><a href="egitimler.html#satis-akademisi">Satış Akademisi</a></li>
+            <li><a href="egitimler.html#crm">CRM ve Müşteri İlişkileri</a></li>
+            <li><a href="egitimler.html#kisa-egitimler">Kısa eğitimler</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>SALT</h4>
+          <ul>
+            <li><a href="galeri.html">Galeri</a></li>
+            <li><a href="index.html#yontem">Yöntem</a></li>
+            <li><a href="index.html#kurucu">Kurucu</a></li>
+            <li><a href="index.html#icgoruler">İçgörüler</a></li>
+            <li><a href="index.html#iletisim">İletişim</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Takip edin</h4>
+          <ul>
+            <li><a href="https://www.linkedin.com/company/salt-academy-consulting" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="https://www.facebook.com/saltacademyconsulting" target="_blank" rel="noopener">Facebook</a></li>
+            <li><a href="https://www.instagram.com/saltacademyconsulting/" target="_blank" rel="noopener">Instagram</a></li>
+            <li><span class="footer__soon">YouTube · yakında</span></li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer__word" aria-hidden="true">SALT</p>
+      <p class="footer__acronym" lang="en"><b>S</b>trategy · <b>A</b>cademy · <b>L</b>eadership · <b>T</b>ransformation</p>
+      <div class="footer__bottom">
+        <span>© 2026 SALT Academy &amp; Consulting</span>
+        <span><a href="../kvkk.html">KVKK Aydınlatma Metni</a> · <a href="../cerez-politikasi.html">Çerez Politikası</a></span>
+        <span>Tasarım ve geliştirme: Manaliza Agency</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js" defer></script>
+  <script src="assets/b.js?v=3" defer></script>
+  <script src="../assets/js/main.js?v=9" defer></script>
+  <script src="../assets/js/arama.js?v=2" defer></script>
+  <script src="../assets/js/zaman-testi.js?v=1" defer></script>
+</body>
+</html>

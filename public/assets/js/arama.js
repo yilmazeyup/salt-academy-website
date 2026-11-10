@@ -10,7 +10,7 @@
   }
 
   var root = document.documentElement;
-  var PAGES = [['index.html', 'Ana sayfa'], ['egitimler.html', 'Eğitimler'], ['galeri.html', 'Galeri']];
+  var PAGES = [['index.html', 'Ana sayfa'], ['egitimler.html', 'Eğitimler'], ['galeri.html', 'Galeri'], ['zaman-testi.html', 'Zaman yönetimi testi']];
   var SUGGEST = ['CRM', 'Müzakere', 'Şikâyet yönetimi', 'Kadınlar için Liderlik', 'Webinar'];
   var here = (location.pathname.split('/').pop() || 'index').replace(/\.html$/, '') + '.html';
 
