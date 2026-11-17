@@ -82,8 +82,8 @@
 .b .mobile-menu .b-menu__nav a {
   display: flex; align-items: baseline; gap: clamp(14px, 2vw, 28px); overflow: hidden;
   padding: 0.12em 0 0.08em; border-bottom: 1px solid var(--line);
-  /* Altı madde kısa ekranlarda da sığsın diye boyut ekran yüksekliğiyle de sınırlanır */
-  font-size: clamp(2.4rem, min(6.2vw, 12vh - 16px), 5.4rem); line-height: 1.06;
+  /* Yedi madde kısa ekranlarda da sığsın diye boyut ekran yüksekliğiyle de sınırlanır */
+  font-size: clamp(2.4rem, min(6.2vw, 10.3vh - 14px), 5.4rem); line-height: 1.06;
 }
 .b-menu__n { flex: none; width: 3em; font-family: var(--font-body); font-size: 0.76rem; letter-spacing: 0.2em; color: var(--gold-500); }
 .b-menu__t { display: inline-block; transform: translateY(110%); transition: transform 0.45s var(--ease-in-out), color 0.3s; }

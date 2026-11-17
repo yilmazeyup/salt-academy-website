@@ -1,0 +1,88 @@
+@charset "UTF-8";
+/* SALT blog: yazı listesi (/blog/) ve yazı sayfaları. Renkler, yazı tipleri, üst menü ve alt bilgi style.css'ten gelir.
+   Sayfaları tools/blog/olustur.py üretir. Manaliza Agency, Kasım 2026. */
+
+/* Blog sayfaları iki tasarımda ortaktır; menüde Blog bağlantısı yazı sayfalarında da seçili görünür */
+.nav__link[aria-current="true"] { color: var(--text-on-navy); }
+.nav__link[aria-current="true"]::after { transform: scaleX(1); transform-origin: left; }
+.mobile-menu a[aria-current="true"] { color: var(--gold-300); text-decoration: line-through; text-decoration-color: var(--gold-400); text-decoration-thickness: 2px; }
+
+/* ---------- Yazı listesi ---------- */
+.blog-list-section { padding-block: clamp(56px, 8vw, 112px) clamp(80px, 10vw, 150px); }
+.blog-list { list-style: none; margin: 0; padding: 0; border-bottom: 1px solid var(--line-ink); }
+.blog-item {
+  position: relative; display: grid; grid-template-columns: minmax(0, 230px) minmax(0, 1fr);
+  gap: 14px clamp(24px, 5vw, 80px); padding-block: clamp(32px, 4vw, 52px); border-top: 1px solid var(--line-ink);
+}
+.blog-item__meta { display: flex; flex-direction: column; gap: 6px; font-size: 0.88rem; color: var(--ink-600); padding-top: 0.5em; }
+.blog-item__title { font-family: var(--font-display); font-size: clamp(2rem, 3.6vw, 3.1rem); line-height: 1.04; color: var(--ink-900); }
+.blog-item__title a { transition: color 0.3s; }
+.blog-item__title a::after { content: ""; position: absolute; inset: 0; }
+.blog-item__title a:focus-visible { outline: none; }
+.blog-item:has(a:focus-visible) { outline: 2px solid var(--gold-700); outline-offset: 6px; border-radius: 6px; }
+.blog-item:hover .blog-item__title a { color: var(--gold-700); }
+.blog-item__summary { margin: 14px 0 18px; color: var(--ink-600); max-width: 62ch; }
+.blog-item__more { display: inline-flex; align-items: center; gap: 10px; font-weight: 700; font-size: 0.9rem; color: var(--ink-900); }
+.blog-item__more svg { width: 18px; height: 18px; transition: transform 0.5s var(--ease-out); }
+.blog-item:hover .blog-item__more svg { transform: translateX(4px); }
+@media (max-width: 760px) {
+  .blog-item { grid-template-columns: minmax(0, 1fr); }
+  .blog-item__meta { flex-direction: row; flex-wrap: wrap; gap: 4px 14px; padding-top: 0; }
+}
+
+/* ---------- Yazı sayfası ---------- */
+.post-hero { padding-block: clamp(140px, 16vw, 210px) clamp(48px, 6vw, 84px); }
+.post-hero__inner, .post-body { width: min(100% - 2 * var(--gutter), 740px); margin-inline: auto; }
+.post-hero .eyebrow a { color: inherit; transition: color 0.3s; }
+.post-hero .eyebrow a:hover { color: var(--gold-200); }
+.post-hero__title {
+  font-family: var(--font-display); font-weight: 500;
+  font-size: clamp(2.7rem, 6.4vw, 5rem); line-height: 1; letter-spacing: -0.02em; overflow-wrap: break-word;
+}
+.post-meta { display: flex; flex-wrap: wrap; gap: 4px 12px; margin: 28px 0 0; font-size: 0.92rem; color: var(--muted-on-navy); }
+.post-meta a { color: var(--text-on-navy); border-bottom: 1px solid var(--line); transition: border-color 0.3s; }
+.post-meta a:hover { border-color: var(--gold-400); }
+
+.post-body-wrap { background: var(--cream-100); color: var(--ink-900); padding-block: clamp(56px, 8vw, 104px) clamp(72px, 9vw, 128px); }
+.post-body { font-size: 1.125rem; line-height: 1.75; overflow-wrap: break-word; }
+.post-body p, .post-body li { color: rgba(13, 29, 46, 0.86); }
+.post-body p { margin: 0 0 1.15em; }
+.post-body > p:first-child { font-size: clamp(1.2rem, 1.6vw, 1.36rem); line-height: 1.6; color: var(--ink-900); }
+.post-body h2 {
+  font-family: var(--font-display); font-weight: 500; color: var(--ink-900);
+  font-size: clamp(1.9rem, 3.2vw, 2.5rem); line-height: 1.1; margin: 1.7em 0 0.55em; scroll-margin-top: 100px;
+}
+.post-body strong { color: var(--ink-900); font-weight: 700; }
+.post-body a { color: var(--gold-700); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; transition: color 0.3s; }
+.post-body a:hover { color: var(--ink-900); }
+.post-body ul, .post-body ol { margin: 0 0 1.3em; padding-left: 1.3em; }
+.post-body li { margin-bottom: 0.55em; padding-left: 0.2em; }
+.post-body li::marker { color: var(--gold-700); font-weight: 700; }
+.post-ornek { border-left: 2px solid var(--gold-500); padding: 2px 0 2px 18px; }
+.post-body p.post-ornek { color: var(--ink-900); }
+
+.post-table { margin: 1.6em 0 1.8em; overflow-x: auto; }
+.post-body table { width: 100%; border-collapse: collapse; font-size: 0.98rem; line-height: 1.55; }
+.post-body th, .post-body td { text-align: left; vertical-align: top; padding: 14px 18px 14px 0; border-bottom: 1px solid var(--line-ink); }
+.post-body thead th { font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 700; color: var(--gold-700); border-bottom-color: rgba(13, 29, 46, 0.32); }
+.post-body tbody td { color: rgba(13, 29, 46, 0.86); }
+.post-body tbody td:first-child { width: 34%; font-weight: 700; color: var(--ink-900); }
+@media (max-width: 560px) {
+  .post-body thead { display: none; }
+  .post-body tr { display: block; padding: 14px 0; border-bottom: 1px solid var(--line-ink); }
+  .post-body td { display: block; padding: 0; border: 0; }
+  .post-body tbody td:first-child {
+    width: auto; margin-bottom: 4px; font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold-700);
+  }
+}
+
+/* Yazı sonu: çağrı ve diğer yazılar */
+.post-cta__actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+.post-more { padding-block: clamp(72px, 9vw, 128px); }
+.post-more .insights { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 40px; }
+.post-more .insight { min-height: 0; }
+.post-more .insight__meta { font-size: 0.85rem; color: var(--ink-600); margin: -6px 0 0; }
+.post-more__all { margin: 36px 0 0; }
+.post-more__all a { font-weight: 700; color: var(--ink-900); border-bottom: 1px solid var(--gold-600); padding-bottom: 2px; }
+.post-more__all a:hover { color: var(--gold-700); }
+@media (max-width: 900px) { .post-more .insights { grid-template-columns: minmax(0, 1fr); } }
