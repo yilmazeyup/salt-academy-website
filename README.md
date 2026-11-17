@@ -12,7 +12,7 @@ Kurumlar ve profesyoneller için iletişim, liderlik ve satış eğitimleri vere
 - **A/B testi.** Sayfanın başındaki küçük bir betik ziyaretçiyi oturum boyunca aynı tasarımda tutar ve 50/50 dağıtır; `?v=a` ya da `?v=b` ile tasarım seçilebilir. Talep formu ve WhatsApp dönüşümleri her tasarım için ayrı teşekkür sayfalarıyla, çerezsiz Cloudflare Web Analytics üzerinden ölçülür.
 - **Site içi arama.** Derleme adımı ya da dizin dosyası yok: arama açıldığında ana sayfa, eğitimler ve galeri okunur, başlıklar, modüller ve dersler aranır. Türkçe karakter ve büyük/küçük harf duyarsızdır ("musteri" → Müşteri); kısayol `Ctrl/Cmd + K` ya da `/`.
 - **Galeri.** Duvar düzeni ve büyük görünüm; ok tuşları, Esc ve parmakla kaydırma. Fotoğraflar bir araçla kırpılır, kurum logoları ve öne çıkan yüzler yumuşak kenarlı olarak bulanıklaştırılır, WebP'ye çevrilir ve konum bilgileri silinir.
-- **Eğitim kataloğu.** Beş program ailesi, filtreler, sekmeli ders listesi ve modül kartları.
+- **Eğitim kataloğu.** Altı program ailesi, filtreler, sekmeli ders listesi ve modül kartları.
 - **Erişilebilirlik.** İçeriğe geç bağlantısı, klavyeyle gezinme, ARIA etiketleri, hareket azaltma tercihine uyum; animasyon kütüphaneleri yüklenmezse sayfa sade hâliyle çalışır.
 - **Hız.** Statik HTML, CSS ve sade JavaScript; çatı (framework) yok. Görseller WebP ve `srcset` ile, yalnızca görünür olduklarında yüklenir.
 - **Gizlilik ve arama motorları.** KVKK aydınlatma metni ve çerez politikası, site haritası, güvenlik başlıkları; önizleme adresleri arama sonuçlarına kapalıdır.
