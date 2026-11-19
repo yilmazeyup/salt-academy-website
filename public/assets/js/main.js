@@ -499,31 +499,63 @@
     });
   });
 
-  /* ---------- Formlar: ziyaretçinin e-posta uygulamasında hazır mesaj açılır ----------
-     Bilgiler sitede saklanmaz; mesaj doğrudan ziyaretçinin e-postasından gelir.
-     Konu satırı sürümü (A ya da B) taşır, teşekkür sayfası da dönüşüm sayımı için sürüme göre ayrıdır. */
+  /* ---------- Formlar: talepler SALT CRM'e kaydedilir (crm.saltacademyconsulting.com) ----------
+     Kayıt anında Ayla Hanım'a e-postayla bildirilir. Bağlantı kurulamazsa eski yol devreye girer:
+     ziyaretçinin e-posta uygulamasında hazır bir mesaj açılır. Teşekkür sayfası dönüşüm sayımı için sürüme göre ayrıdır. */
+  var CRM_ADRES = 'https://crm.saltacademyconsulting.com/api/talep';
+
+  function mailtoAc(form, variant) {
+    var lines = [];
+    form.querySelectorAll('input, select, textarea').forEach(function (el) {
+      if (el.type === 'checkbox' || el.type === 'hidden' || !el.name || el.name === 'web' || !String(el.value).trim()) return;
+      var lab = el.id ? form.querySelector('label[for="' + el.id + '"]') : null;
+      lines.push((lab ? lab.textContent.replace('*', '').trim() : el.name) + ': ' + String(el.value).trim());
+    });
+    var optin = form.querySelector('input[name="bulten"]');
+    if (optin) lines.push('E-bülten izni: ' + (optin.checked ? 'Evet' : 'Hayır'));
+    lines.push('', '— saltacademyconsulting.com formu · Sürüm ' + variant);
+    var subject = (form.getAttribute('data-subject') || 'Web sitesi talebi') + ' (Sürüm ' + variant + ')';
+    window.location.href = 'mailto:' + form.getAttribute('data-mailto') +
+      '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(lines.join('\n'));
+  }
+
   document.querySelectorAll('form[data-mailto]').forEach(function (form) {
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       if (!form.checkValidity()) { form.reportValidity(); return; }
       var variant = window.SALT_VARIANT || 'A';
-      var lines = [];
-      form.querySelectorAll('input, select, textarea').forEach(function (el) {
-        if (el.type === 'checkbox' || !el.name || !String(el.value).trim()) return;
-        var lab = el.id ? form.querySelector('label[for="' + el.id + '"]') : null;
-        lines.push((lab ? lab.textContent.replace('*', '').trim() : el.name) + ': ' + String(el.value).trim());
-      });
-      var optin = form.querySelector('input[name="bulten"]');
-      if (optin) lines.push('E-bülten izni: ' + (optin.checked ? 'Evet' : 'Hayır'));
-      lines.push('', '— saltacademyconsulting.com formu · Sürüm ' + variant);
-      var subject = (form.getAttribute('data-subject') || 'Web sitesi talebi') + ' (Sürüm ' + variant + ')';
-      var href = 'mailto:' + form.getAttribute('data-mailto') +
-        '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(lines.join('\n'));
+      var btn = form.querySelector('button[type="submit"]');
       var ok = form.querySelector('.form__success');
-      if (ok) { ok.hidden = false; ok.setAttribute('tabindex', '-1'); ok.focus({ preventScroll: true }); }
-      window.location.href = href;
       var thanks = form.getAttribute('data-thanks');
-      if (thanks) setTimeout(function () { window.location.href = thanks; }, 1200);
+      var veri = new URLSearchParams();
+      veri.set('tur', form.getAttribute('data-crm') || 'talep');
+      form.querySelectorAll('input, select, textarea').forEach(function (el) {
+        if (!el.name) return;
+        veri.set(el.name, el.type === 'checkbox' ? (el.checked ? '1' : '0') : String(el.value).trim());
+      });
+      veri.set('surum', variant);
+      veri.set('sayfa', location.pathname);
+      if (/utm_/.test(location.search)) veri.set('utm', location.search.slice(1, 300));
+      var goster = function (metin) {
+        if (!ok) return;
+        ok.textContent = metin; ok.hidden = false; ok.setAttribute('tabindex', '-1'); ok.focus({ preventScroll: true });
+      };
+      if (btn) btn.disabled = true;
+      goster('Gönderiliyor…');
+      fetch(CRM_ADRES, { method: 'POST', body: veri, mode: 'cors', credentials: 'omit' })
+        .then(function (r) { return r.json().then(function (j) { if (!r.ok || !j.ok) throw new Error(j.hata || String(r.status)); }); })
+        .then(function () {
+          if (thanks) { window.location.href = thanks; return; }
+          form.reset();
+          if (btn) btn.disabled = false;
+          goster(form.getAttribute('data-tamam') || 'Teşekkürler, bilgileriniz bize ulaştı.');
+        })
+        .catch(function () {
+          if (btn) btn.disabled = false;
+          goster('Bağlantı kurulamadı; e-posta uygulamanız hazır bir mesajla açılıyor. Mesajı göndermeniz yeterli.');
+          mailtoAc(form, variant);
+          if (thanks) setTimeout(function () { window.location.href = thanks + '?yedek=1'; }, 1500);
+        });
     });
   });
 

@@ -26,10 +26,19 @@
   <main class="thanks" id="icerik">
     <div class="container">
       <svg class="thanks__swoosh" viewBox="0 0 420 90" aria-hidden="true"><path d="M10 72 C 90 72, 128 18, 212 28 S 330 74, 410 18"/></svg>
-      <p class="eyebrow">Talebiniz hazır</p>
+      <p class="eyebrow" id="t-ust">Talebiniz bize ulaştı</p>
       <h1>Teşekkürler<em>.</em></h1>
-      <p class="lead">E-posta uygulamanızda açılan mesajı gönderdiğinizde talebiniz bize ulaşır; 24 saat içinde dönüş yapıyoruz.</p>
-      <p class="lead">Uygulama açılmadıysa <a href="mailto:ayla@saltacademyconsulting.com">ayla@saltacademyconsulting.com</a> adresine yazabilir ya da WhatsApp'tan ulaşabilirsiniz.</p>
+      <p class="lead" id="t-ana">24 saat içinde dönüp ihtiyaç görüşmesi için bir saat önereceğiz.</p>
+      <p class="lead" id="t-yedek" hidden>E-posta uygulamanızda açılan mesajı gönderdiğinizde talebiniz bize ulaşır; 24 saat içinde dönüş yapıyoruz. Uygulama açılmadıysa <a href="mailto:ayla@saltacademyconsulting.com">ayla@saltacademyconsulting.com</a> adresine yazabilirsiniz.</p>
+      <p class="lead">Acil bir konu için WhatsApp'tan da ulaşabilirsiniz.</p>
+      <script>
+        // Kayıt sistemine ulaşılamadıysa form e-posta uygulamasını açar ve buraya ?yedek=1 ile gelir
+        if (/[?&]yedek=1/.test(location.search)) {
+          document.getElementById('t-ust').textContent = 'Talebiniz hazır';
+          document.getElementById('t-ana').hidden = true;
+          document.getElementById('t-yedek').hidden = false;
+        }
+      </script>
       <div class="thanks__actions">
         <a class="btn btn--solid" href="wa.html" target="_blank" rel="noopener">WhatsApp'tan yazın</a>
         <a class="btn" href="index.html">Ana sayfaya dön</a>

@@ -409,12 +409,13 @@
           <h2 class="h2" id="webinar-baslik">Ekipler için <em>60–90 dakika.</em></h2>
           <p>Liderlik, iletişim ve satış üzerine online oturumlar. İlk yayın tarihi açıklandığında size haber verelim.</p>
         </div>
-        <form class="webinar__form" data-mailto="ayla@saltacademyconsulting.com" data-subject="Webinar duyuru listesi">
+        <form class="webinar__form" data-mailto="ayla@saltacademyconsulting.com" data-subject="Webinar duyuru listesi" data-crm="webinar" data-tamam="Teşekkürler, listeye eklendiniz. İlk yayın tarihini e-postayla duyuracağız.">
+          <div class="visually-hidden" aria-hidden="true"><label for="w-web">Web sitesi</label><input id="w-web" name="web" tabindex="-1" autocomplete="off"></div>
           <label class="visually-hidden" for="w-eposta">E-posta adresiniz</label>
           <input id="w-eposta" name="eposta" type="email" autocomplete="email" required placeholder="E-posta adresiniz">
           <button class="btn" type="submit">Haber ver</button>
-          <label class="check"><input type="checkbox" required> <span>Webinar duyurularını e-postayla almayı kabul ediyorum.</span></label>
-          <p class="form__success" hidden>Teşekkürler. E-posta uygulamanız açılıyor; mesajı gönderdiğinizde listeye ekleniyorsunuz.</p>
+          <label class="check"><input type="checkbox" name="izin" required> <span>Webinar duyurularını e-postayla almayı kabul ediyorum.</span></label>
+          <p class="form__success" hidden role="status"></p>
         </form>
       </div>
     </section>
@@ -433,7 +434,8 @@
             <li><span class="contact__label">Adres</span><span>Ümraniye, İstanbul</span></li>
           </ul>
         </div>
-        <form class="form" data-mailto="ayla@saltacademyconsulting.com" data-subject="Web sitesi eğitim talebi" data-thanks="tesekkurler.html" data-reveal aria-describedby="form-not">
+        <form class="form" data-mailto="ayla@saltacademyconsulting.com" data-subject="Web sitesi eğitim talebi" data-crm="talep" data-thanks="tesekkurler.html" data-reveal aria-describedby="form-not">
+          <div class="visually-hidden" aria-hidden="true"><label for="f-web">Web sitesi</label><input id="f-web" name="web" tabindex="-1" autocomplete="off"></div>
           <div class="field"><label for="f-ad">Ad Soyad *</label><input id="f-ad" name="ad" autocomplete="name" required></div>
           <div class="field"><label for="f-kurum">Kurum</label><input id="f-kurum" name="kurum" autocomplete="organization"></div>
           <div class="field"><label for="f-eposta">E-posta *</label><input id="f-eposta" name="eposta" type="email" autocomplete="email" required></div>
@@ -445,17 +447,19 @@
               <option>Kadınlar için Liderlik</option>
               <option>Kurumsal İletişim Akademisi</option>
               <option>Satış Akademisi</option>
+              <option>CRM ve Müşteri İlişkileri</option>
+              <option>Dijital Zihin ve Yeni Nesil Düşünme Becerileri</option>
               <option>Kısa eğitim veya webinar</option>
             </select>
           </div>
           <div class="field field--full"><label for="f-mesaj">Mesajınız</label><textarea id="f-mesaj" name="mesaj" placeholder="Ekip büyüklüğü, hedef ve uygun tarih aralığı"></textarea></div>
-          <label class="check"><input type="checkbox" required> <span><a href="kvkk.html" target="_blank" rel="noopener">KVKK Aydınlatma Metni</a>'ni okudum; kişisel verilerimin talebimi yanıtlamak için işlenmesini kabul ediyorum. *</span></label>
+          <label class="check"><input type="checkbox" name="kvkk" required> <span><a href="kvkk.html" target="_blank" rel="noopener">KVKK Aydınlatma Metni</a>'ni okudum; kişisel verilerimin talebimi yanıtlamak için işlenmesini ve bu amaçla yurt dışındaki sunucularda saklanmasını kabul ediyorum. *</span></label>
           <label class="check"><input type="checkbox" name="bulten"> <span>SALT'tan e-bülten ve etkinlik duyuruları almak istiyorum (isteğe bağlı).</span></label>
           <div><button class="btn btn--solid" type="submit" data-magnetic>Gönder
             <svg class="btn__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           </button></div>
-          <p class="form__note" id="form-not">Gönder'e bastığınızda e-posta uygulamanız hazır bir mesajla açılır; göndermeniz yeterli. İsterseniz WhatsApp'tan da yazabilirsiniz.</p>
-          <p class="form__success" hidden>E-posta uygulamanız açılıyor…</p>
+          <p class="form__note" id="form-not">Talebiniz doğrudan bize ulaşır; 24 saat içinde dönüş yaparız. İsterseniz WhatsApp'tan da yazabilirsiniz.</p>
+          <p class="form__success" hidden role="status"></p>
         </form>
       </div>
     </section>
@@ -517,7 +521,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
   <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js" defer></script>
-  <script src="assets/js/main.js?v=9" defer></script>
+  <script src="assets/js/main.js?v=10" defer></script>
   <script src="assets/js/arama.js?v=2" defer></script>
 </body>
 </html>

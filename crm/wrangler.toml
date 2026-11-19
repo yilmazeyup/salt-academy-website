@@ -1,0 +1,28 @@
+# SALT CRM · sitedeki formların kaydı ve takip paneli. Adres: https://crm.saltacademyconsulting.com
+# Dağıtım (crm klasöründen): npx --yes wrangler@4.86.0 deploy
+name = "salt-crm"
+main = "src/index.js"
+account_id = "9822277e91ec56412bcf556ca2b03923"
+compatibility_date = "2026-10-01"
+workers_dev = false
+preview_urls = false
+
+routes = [{ pattern = "crm.saltacademyconsulting.com", custom_domain = true }]
+
+# Her iş günü 09.00'da (06.00 UTC) takip özeti: bekleyen yeni talepler ve tarihi gelen adımlar
+[triggers]
+crons = ["0 6 * * MON-FRI"]
+
+[observability]
+enabled = true
+
+[[d1_databases]]
+binding = "DB"
+database_name = "salt-crm"
+database_id = "75f082ed-3cc5-4ea1-a795-d0fbb2b1936f"
+
+# Bildirim e-postaları Ayla Hanım'ın Gmail hesabından, iş birliği e-postalarını gönderen worker üzerinden gider.
+# O worker'ın dışarıya açık adresi yoktur; yalnızca bu bağlantıyla çağrılır. Şifre bu projede hiç bulunmaz.
+[[services]]
+binding = "POSTA"
+service = "salt-ortaklik"
