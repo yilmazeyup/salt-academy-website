@@ -1,9 +1,10 @@
-"""Kuruma özel öneri sayfaları (alt alan adları): igem.saltacademyconsulting.com, gdg-gaziantep.saltacademyconsulting.com.
+"""Kuruma özel öneri sayfaları (alt alan adları): igem., gdg-gaziantep. ve aysiad.saltacademyconsulting.com.
 
 Görünüm gaib.saltacademyconsulting.com ile aynıdır: CSS, gaib/index.html içindeki <style> bloğundan okunur.
 Her kurum depo kökünde kendi klasörüne yazılır (igem/, gdg-gaziantep/) ve ayrı bir Cloudflare Pages projesi olarak yayımlanır:
   npx --yes wrangler@4.86.0 pages deploy igem --project-name salt-igem --branch main
   npx --yes wrangler@4.86.0 pages deploy gdg-gaziantep --project-name salt-gdg-gaziantep --branch main
+  npx --yes wrangler@4.86.0 pages deploy aysiad --project-name salt-aysiad --branch main
 Slayt görselleri (assets/sunum/slayt-NN.webp) ve PDF'ler sunumun PDF'inden üretilip klasöre kopyalanır; bu betik yalnızca index.html yazar.
 Yeni kurum eklemek için KURUMLAR'a bir kayıt ekleyip çalıştırın (depo kökünden):  python3 -I tools/kurum/olustur.py
 """
@@ -121,6 +122,57 @@ KURUMLAR = [
         "posta_konu": "GDG Gaziantep · Atölye",
         "wa": "Merhaba, GDG Gaziantep için hazırladığınız atölye önerisi hakkında görüşmek istiyorum.",
         "alt": "Bu sayfa, SALT Academy &amp; Consulting tarafından GDG Gaziantep'e sunulan atölye önerisidir.",
+    },
+    {
+        "klasor": "aysiad", "alan": "aysiad.saltacademyconsulting.com", "kisa": "AYSİAD",
+        "baslik": "Yazılım Ekipleri İçin Eğitim Önerisi",
+        "aciklama": "SALT Academy & Consulting'in AYSİAD üyeleri için hazırladığı eğitim önerisi: teknik ekiplerde iletişim, müşteri ve satış iletişimi, takım liderliği.",
+        "ust": "AYSİAD için öneri",
+        "h1": "Yazılım ekipleri için <em>iletişim</em> ve liderlik",
+        "giris": "Teknik ekiplerde iletişim, müşteri ve satış iletişimi, takım liderliği ve dijital beceriler üzerine uygulamalı programlarımızı AYSİAD üyelerinin ekipleri için bir araya getirdik. Her program firmanın kendi proje ve müşteri örnekleriyle uyarlanır ve 30 günlük bir eylem planıyla biter.",
+        "kemer": ("5", "program · 3 başlangıç yolu"),
+        "pdf": ("SALT-Yazilim-Ekipleri-Egitim-Onerisi.pdf", "Eğitim önerisi sunumu", "PDF · 18 slayt · 0,4 MB"),
+        "ihtiyac": {
+            "ust": "Yazılım firmalarında iletişim", "h2": "Ekibin <em>dört</em> anı",
+            "metin": "İyi ürün yalnızca iyi kodla değil, ekip içinde ve müşteriyle kurulan iletişimle çıkıyor. Programlarımız yazılım ekiplerinin iletişimde en çok sınandığı bu dört anın üzerine kurulu.",
+            "kartlar": [("Anlatmak", "Teknik olmayan birine", "Bir mimari kararı ya da gecikmenin nedenini yöneticiye veya müşteriye jargonsuz anlatmak."),
+                        ("Kod inceleme", "Yapıcı geri bildirim", "Kod incelemesinde kişiyi değil kodu konuşmak; yorumu kırıcı değil yol gösterici yazmak."),
+                        ("Beklenti", "Net söz vermek", "“Yakında biter” yerine kapsamı, riski ve tarihi açıkça söylemek."),
+                        ("Satış", "Teklif ve demo", "Ürünü özellik listesiyle değil, müşterinin sorununa getirdiği çözümle anlatmak.")],
+        },
+        "programlar": {
+            "ust": "Beş program", "h2": "Ekiplere göre <em>beş</em> program",
+            "metin": "Geliştiriciler, destek ve proje ekipleri, satış ekipleri ve takım liderleri için. Süreler firmanın çalışma düzenine göre bölünebilir.",
+            "liste": [
+                ("Program 1 · Üye buluşması", "Kod Derlenir, İnsan Yorumlar", "60–90 dk", "Geliştiriciler ve üye buluşmaları",
+                 [("", ["<strong>Teknik konuyu sade anlatmak:</strong> bir kavramı üç cümlede, dinleyiciye göre", "<strong>Kod incelemede geri bildirim:</strong> gözlem, etki, öneri",
+                        "<strong>Beklenti yönetimi:</strong> kapsam, risk ve tarih konuşması", "<strong>Kısa demo anlatımı:</strong> sorun, çözüm ve sonuç akışı"])]),
+                ("Program 2", "Müşteri İletişimi ve Şikâyet Yönetimi", "Yarım gün", "Destek, proje ve satış sonrası ekipleri",
+                 [("", ["<strong>İhtiyaç analizi:</strong> talebin arkasındaki asıl ihtiyacı sormak", "<strong>Kapsam ve tarih:</strong> riski ve teslimi açık konuşmak",
+                        "<strong>Şikâyet:</strong> dinlemek, netleştirmek ve somut bir dönüş zamanı vermek", "<strong>Proje sonrası:</strong> takip ve memnuniyet"])]),
+                ("Program 3", "Satış Akademisi", "Modüler", "Modül başına 90 dk · satış ve iş geliştirme ekipleri",
+                 [("", ["Özellikten faydaya geçmek", "Fiyat itirazına sakin ve gerekçeli yanıt", "Demoyu müşterinin sorunu üzerinden kurmak", "Gerçekçi ve etik hikâye anlatımı"])]),
+                ("Program 4", "Liderlik ve Ekip İletişimi", "Modüler", "Modül başına yaklaşık 3 saat · takım liderleri",
+                 [("", ["<strong>Geri bildirim:</strong> geleceğe odaklı bir geri bildirim kültürü", "<strong>Delegasyon:</strong> işi beklentisi ve takibi net biçimde devretmek",
+                        "<strong>Çatışma yönetimi:</strong> taraf tutmadan, hızlı ve adil", "<strong>Motivasyon:</strong> ekibi hedefe bağlayan toplantılar"])]),
+                ("Program 5", "Dijital Zihin", "6 saat", "Tüm ekipler",
+                 [("", ["Bilgiyi kaynağı ve kanıtıyla sorgulamak", "Dikkati ve odaklanmayı yönetmek", "Yapay zekâdan güvenli ve amaçlı yararlanmak", "Yedi günlük kişisel dijital gelişim planı"])]),
+            ],
+        },
+        "slaytlar": [(1, "Kapak", "Kapak: Yazılım ekipleri için iletişim ve liderlik"), (7, "Ekibin dört anı", "Yazılım ekiplerinde iletişimin sınandığı dört an"),
+                     (10, "Beş program", "Ekiplere göre beş program önerisi"), (11, "Üye buluşması", "Kod Derlenir, İnsan Yorumlar oturumunun içeriği"),
+                     (12, "Müşteri ve satış", "Müşteriyle proje boyunca ve teklif aşamasında iletişim"), (13, "Programlar ve süreler", "Programlar, kimler için oldukları ve süreleri"),
+                     (16, "Başlangıç yolları", "AYSİAD ile üç başlangıç yolu")],
+        "sunum_metin": "18 slaytlık sunumda programların içeriği, süreleri ve AYSİAD ile nasıl başlayabileceğimiz yer alıyor. Kaydırarak göz atabilir, tamamını PDF olarak indirebilirsiniz.",
+        "modeller": {"ust": "AYSİAD ile birlikte", "h2": "Üç <em>başlangıç</em> yolu", "metin": "En hızlısı bir üye buluşması: kısa bir oturumla başlayıp ilgilenen firmalarla büyütürüz.",
+                     "kartlar": [("60–90 dk", "Üye buluşması", "Deneyim paylaşımı buluşmalarınızdan birinde üyelerinize “Kod Derlenir, İnsan Yorumlar” oturumu."),
+                                 ("Firmaya özel", "Üye firmalara program", "Bir üye firmanın ekibine göre uyarlanan, ön ve son değerlendirmeli eğitim."),
+                                 ("Yeni üreticiler", "Genç yazılımcılara atölye", "Yeni yazılımcılar için kendini anlatma, profesyonel yazışma ve iş görüşmesine hazırlık.")]},
+        "kurucu_ek": "Sakarya Üniversitesi Bilgisayar Programcılığı mezunu; teknik ekiplerin dilini de, müşterinin beklentisini de yakından biliyor.",
+        "kapanis": "Kısa bir görüşmede üyelerinizin ihtiyaçlarını dinleyip ilk buluşmanın tarihini ve biçimini birlikte planlayalım.",
+        "posta_konu": "AYSİAD · Tanışma görüşmesi",
+        "wa": "Merhaba, AYSİAD için hazırladığınız eğitim önerisi hakkında görüşmek istiyorum.",
+        "alt": "Bu sayfa, SALT Academy &amp; Consulting tarafından AYSİAD'a (Anadolu Yazılım Sanayicileri ve İş İnsanları Derneği) sunulan eğitim önerisidir.",
     },
 ]
 
